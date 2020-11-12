@@ -1,0 +1,233 @@
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Lora", serif;
+  font-weight: 100;
+}
+
+.container {
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  color: black;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+.navbar:hover {
+  background: rgba(60, 68, 70, 0.3);
+  transition: background 700ms;
+  color: lightblue;
+}
+
+.navbar.scrolled {
+  background: rgba(60, 68, 70, 0.3);
+  transition: background 700ms;
+}
+
+.navbar-link-brand {
+  color: #375c7d;
+  font-weight: 200;
+  font-size: 3rem;
+}
+
+.navbar-items {
+  display: flex;
+}
+
+.nav-link {
+  padding-right: 14px;
+}
+
+.nav-link:hover {
+  text-shadow: 1px black;
+  transition: 1s text-shadow;
+}
+
+.nav-link-toggle {
+  display: none;
+}
+
+.navbar-items-right {
+  margin-left: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar-items,
+  .navbar {
+    flex-direction: column;
+  }
+  .navbar-items {
+    display: none;
+  }
+  .navbar-items-right {
+    margin-left: 0;
+  }
+  .nav-link-toggle {
+    align-self: flex-end;
+    display: initial;
+    position: absolute;
+    cursor: pointer;
+  }
+  .navbar-toggle-show {
+    display: flex;
+  }
+}
+
+.content {
+  margin-top: 100px;
+}
+
+i {
+  color: white;
+}
+
+i:hover {
+  color: lightblue;
+}
+
+.card-img-overlay {
+  color: white;
+  visibility: visible;
+}
+
+.card-title {
+  text-shadow: 1px 1px 2px #111;
+  justify-content: baseline;
+}
+
+.card {
+  border: none;
+  margin-top: 20px;
+  height: 22rem;
+  width: 22rem;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.card:hover {
+  cursor: pointer;
+  /* box-shadow: 1px 1px 1px 1px black; */
+  border: 3px solid grey;
+  transition: border 1s, transform 700ms;
+}
+.card-text {
+  color: black;
+  text-shadow: 1px 1px 2px white;
+}
+
+.card div {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 1s, opacity 1s;
+  text-align: right;
+  align-items: baseline;
+}
+.card:hover div {
+  visibility: visible;
+  opacity: 0.5;
+  transition: opacity 1s;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-img:hover {
+  background: rgb(0, 0, 0, 0.5);
+  transform: scale(1.05);
+  transition: transform 1s;
+}
+
+.footer {
+  text-align: center;
+  background: linear-gradient(45deg, rgba(60, 68, 70, 0.4), white);
+  /* background: rgba(60, 68, 70, 0.2); */
+  padding-bottom: 10px;
+}
+
+.row {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.form {
+  align-items: flex-start;
+  padding-top: 300px;
+}
+
+input,
+textarea {
+  background: rgb(255, 255, 255, 0.5);
+}
+
+label {
+  color: white;
+}
+
+.hero {
+  background-image: url("/images/KR28.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 800px;
+}
+
+.lesson {
+  background-image: url("/images/KR9.jpg");
+  background-size: cover;
+  height: 800px;
+}
+
+.contact {
+  background-image: url("/images/KR11.jpg");
+  background-size: cover;
+  height: 800px;
+}
+
+.bio {
+  padding-top: 150px;
+  padding-left: 200px;
+  padding-right: 200px;
+  background-image: url("/images/KR32.jpg");
+  background-size: cover;
+  height: 800px;
+}
+
+.bio-text {
+  color: white;
+  background-color: rgb(0, 0, 0, 0.5);
+  height: 500px;
+}
+
+.hr1 {
+  border: none;
+  border-color: inherit;
+  overflow: visible;
+  text-align: center;
+  height: 1px;
+  margin: 20 70px;
+  background-color: white;
+  background-image: -webkit-linear-gradient(left, black, #eee, white);
+  background-image: -moz-linear-gradient(left, black, #eee, white);
+  background-image: -ms-linear-gradient(left, black, #eee, white);
+  background-image: -o-linear-gradient(left, black, #eee, white);
+}
+
+.hr2 {
+  border: none;
+  border-color: inherit;
+  overflow: visible;
+  text-align: center;
+  height: 1px;
+  margin: 20 70px;
+  background-color: white;
+  background-image: -webkit-linear-gradient(left, black, #eee, white);
+  background-image: -moz-linear-gradient(left, black, #eee, white);
+  background-image: -ms-linear-gradient(left, black, #eee, white);
+  background-image: -o-linear-gradient(left, black, #eee, white);
+}
