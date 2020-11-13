@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container short-bio">
   <hr class="hr1" />
   <p>
     A violist and an educator, Kip Riecken has performed with the Chicago and
@@ -6,7 +6,7 @@
     and Tabea Zimmerman. Kip's study of the Alexander Technique, an
     indispensable method for enhancing efficiency of movement and personal
     expression, inspires a lively and warm perspective on music-making and
-    teaching. Click here to see Kip talk about the Alexander Technique on
+    teaching. Click <a href="https://www.youtube.com/channel/UCOzQuf-qTzKJx6YfYTaJLpQ?view_as=subscriber">here</a> to see Kip talk about the Alexander Technique on
     YouTube.
   </p>
   <hr class="hr2" />

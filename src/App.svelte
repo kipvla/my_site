@@ -8,7 +8,7 @@
   // router
   import { Router, Route, Link } from "svelte-routing";
   // components
-  import Navbar from "./components/Navbar.svelte";
+  import Navbar from "./components/Navbar/Navbar.svelte";
   import Footer from "./components/Footer.svelte";
 </script>
 

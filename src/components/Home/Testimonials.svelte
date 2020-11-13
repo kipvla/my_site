@@ -2,6 +2,6 @@
   <h1>Testimonials</h1>
   <br />
   <div class="testimonials">
-    <p>"Kip is incredible."</p>
+    <p>"Kip...he's amazing." - Tim Heidecker</p>
   </div>
 </div>

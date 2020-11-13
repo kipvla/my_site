@@ -1,10 +1,7 @@
 <script>
-  import Lesson from "../components/Lesson.svelte";
+  import Lesson from "../components/Lessons/Lesson.svelte";
+  import LessonOption from "../components/Lessons/LessonOption.svelte";
 </script>
 
 <Lesson />
-<div class="container">
-  <div class="content">
-    <h1>Lesson info here</h1>
-  </div>
-</div>
+<LessonOption />

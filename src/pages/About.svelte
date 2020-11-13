@@ -1,5 +1,5 @@
 <script>
-  import Bio from "../components/Bio.svelte";
+  import Bio from "../components/about/Bio.svelte";
 </script>
 
 <Bio />
