@@ -392,8 +392,6 @@ Lessons page
   }
   .lessons-container {
     flex-wrap: wrap;
-    width: 100vw;
-    height: auto;
   }
   .name {
     visibility: hidden;
