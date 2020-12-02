@@ -388,9 +388,12 @@ Lessons page
   }
   #lesson-img {
     width: 100vw;
+    height: auto;
   }
   .lessons-container {
     flex-wrap: wrap;
+    width: 100vw;
+    height: auto;
   }
   .name {
     visibility: hidden;
