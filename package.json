@@ -16,6 +16,7 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
+    "mediaelement": "^4.2.16",
     "sirv-cli": "^1.0.0",
     "svelte-routing": "^1.4.2"
   }

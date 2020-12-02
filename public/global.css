@@ -375,6 +375,7 @@ Lessons page
 
 #lesson-img {
   width: 50vw;
+  height: auto;
 }
 
 .lesson-type {

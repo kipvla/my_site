@@ -21,3 +21,5 @@
     </figure>
   </div>
 </div>
+<!-- svelte-ignore a11y-media-has-caption -->
+<audio src="sounds/STE-026/mp3" class="mejs__player" data-mejsoptions> </audio>
