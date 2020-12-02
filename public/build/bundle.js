@@ -1960,16 +1960,16 @@ var app = (function () {
     			p3 = element("p");
     			p3.textContent = "A passion for education has led him to over 15 years of teaching\n        experience, from beginning level to college and professional, in English\n        and in Spanish. He maintains an online Zoom violin and viola studio.";
     			attr_dev(p0, "mb-5", "");
-    			add_location(p0, file$b, 3, 6, 103);
-    			add_location(p1, file$b, 9, 6, 356);
-    			add_location(p2, file$b, 18, 6, 826);
-    			add_location(p3, file$b, 28, 6, 1403);
+    			add_location(p0, file$b, 9, 6, 156);
+    			add_location(p1, file$b, 15, 6, 409);
+    			add_location(p2, file$b, 24, 6, 879);
+    			add_location(p3, file$b, 34, 6, 1456);
     			attr_dev(div0, "class", "row bio-text text-justify clearfix");
-    			add_location(div0, file$b, 2, 4, 48);
-    			attr_dev(div1, "class", "container");
-    			add_location(div1, file$b, 1, 2, 20);
+    			add_location(div0, file$b, 8, 4, 101);
+    			attr_dev(div1, "class", "container svelte-um51l");
+    			add_location(div1, file$b, 7, 2, 73);
     			attr_dev(div2, "class", "bio");
-    			add_location(div2, file$b, 0, 0, 0);
+    			add_location(div2, file$b, 6, 0, 53);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");

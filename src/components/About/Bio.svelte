@@ -1,3 +1,9 @@
+<style>
+  .container {
+    width: 90%;
+  }
+</style>
+
 <div class="bio">
   <div class="container">
     <div class="row bio-text text-justify clearfix">
@@ -35,3 +41,4 @@
 
   </div>
 </div>
+

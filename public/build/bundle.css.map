@@ -1,8 +1,12 @@
 {
   "version": 3,
   "file": "bundle.css",
-  "sources": [],
-  "sourcesContent": [],
+  "sources": [
+    "Bio.svelte"
+  ],
+  "sourcesContent": [
+    "<style>\n  .container {\n    width: 90%;\n  }\n</style>\n\n<div class=\"bio\">\n  <div class=\"container\">\n    <div class=\"row bio-text text-justify clearfix\">\n      <p mb-5>\n        In a varied career as a violist and violinist, Kip has performed with the\n        Chicago, St. Louis and New World Symphonies, the Civic Orchestra of\n        Chicago, and alongside Yo-Yo Ma and Tabea Zimmerman.\n      </p>\n      ​\n      <p>\n        Kip's passion for engaging audiences drives myriad personal initiatives.\n        As a New World Symphony fellow, he worked with artistic director Michael\n        Tilson Thomas to program, produce, and host a concert exploring the role\n        of the artist in today’s world, and led 16 New World Symphony fellows in\n        studying Spanish and leading public performances in which all musicians\n        provided Spanish commentary.\n      </p>\n      ​\n      <p>\n        Kip has spent 10 years studying the Alexander Technique (AT), a method for\n        enhancing coordination and embodied thoughtfulness which he credits for\n        bringing new life to his music-making. As a Civic Orchestra of Chicago\n        fellow, Kip designed and implemented The Rediscovering Musician in which\n        two Civic Orchestra of Chicago colleagues received eight Alexander\n        Technique lessons as he followed and documented their individual journeys.\n        Kip maintains a YouTube channel about Alexander Technique.\n      </p>\n      ​\n      <p>\n        A passion for education has led him to over 15 years of teaching\n        experience, from beginning level to college and professional, in English\n        and in Spanish. He maintains an online Zoom violin and viola studio.\n      </p>\n    </div>\n\n  </div>\n</div>\n\n"
+  ],
   "names": [],
-  "mappings": ""
+  "mappings": "AACE,UAAU,aAAC,CAAC,AACV,KAAK,CAAE,GAAG,AACZ,CAAC"
 }
