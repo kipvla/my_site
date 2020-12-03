@@ -3,6 +3,12 @@
   import LessonOption from "../components/Lessons/LessonOption.svelte";
 </script>
 
+<style>
+  .container {
+    flex-basis: auto;
+  }
+</style>
+
 <div class="lessons-container">
   <img src="images/KR9.jpg" id="lesson-img" alt="" />
   <div class="container">

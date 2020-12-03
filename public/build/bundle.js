@@ -1,5 +1,5 @@
 
-(function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35730/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(window.document);
+(function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(window.document);
 var app = (function () {
     'use strict';
 
@@ -1828,28 +1828,28 @@ var app = (function () {
     			if (img.src !== (img_src_value = "images/KR9.jpg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "id", "lesson-img");
     			attr_dev(img, "alt", "");
-    			add_location(img, file$a, 6, 2, 186);
-    			add_location(h30, file$a, 10, 8, 336);
-    			add_location(h50, file$a, 11, 8, 366);
-    			add_location(p0, file$a, 12, 8, 400);
+    			add_location(img, file$a, 12, 2, 245);
+    			add_location(h30, file$a, 16, 8, 395);
+    			add_location(h50, file$a, 17, 8, 425);
+    			add_location(p0, file$a, 18, 8, 459);
     			attr_dev(div0, "class", "lesson-type");
-    			add_location(div0, file$a, 9, 6, 302);
-    			add_location(h31, file$a, 15, 8, 459);
-    			add_location(h51, file$a, 16, 8, 490);
-    			add_location(p1, file$a, 17, 8, 524);
+    			add_location(div0, file$a, 15, 6, 361);
+    			add_location(h31, file$a, 21, 8, 518);
+    			add_location(h51, file$a, 22, 8, 549);
+    			add_location(p1, file$a, 23, 8, 583);
     			attr_dev(div1, "class", "lesson-type");
-    			add_location(div1, file$a, 14, 6, 425);
-    			add_location(h32, file$a, 20, 8, 583);
-    			add_location(h52, file$a, 21, 8, 631);
-    			add_location(p2, file$a, 22, 8, 659);
+    			add_location(div1, file$a, 20, 6, 484);
+    			add_location(h32, file$a, 26, 8, 642);
+    			add_location(h52, file$a, 27, 8, 690);
+    			add_location(p2, file$a, 28, 8, 718);
     			attr_dev(div2, "class", "lesson-type");
-    			add_location(div2, file$a, 19, 6, 549);
+    			add_location(div2, file$a, 25, 6, 608);
     			attr_dev(div3, "class", "lesson-option");
-    			add_location(div3, file$a, 8, 4, 268);
-    			attr_dev(div4, "class", "container");
-    			add_location(div4, file$a, 7, 2, 240);
+    			add_location(div3, file$a, 14, 4, 327);
+    			attr_dev(div4, "class", "container svelte-46yigu");
+    			add_location(div4, file$a, 13, 2, 299);
     			attr_dev(div5, "class", "lessons-container");
-    			add_location(div5, file$a, 5, 0, 152);
+    			add_location(div5, file$a, 11, 0, 211);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");

@@ -209,9 +209,9 @@ textarea {
 }
 
 .contact {
-  background-image: url("/images/KR11-crop.jpg");
+  background-image: url("/images/KR12.jpg");
   background-size: cover;
-  background-position: center center;
+  background-position: center 59%;
   height: 500px;
 }
 
@@ -374,14 +374,20 @@ Lessons page
   margin-top: 40vh;
 }
 
+/* .lesson-container {
+  flex-basis: ;
+} */
+
 .color {
   background: linear-gradient(90deg, white, rgb(235,235,235), white);
   height: 54px;
 }
 
 #lesson-img {
-  flex-basis: 50vw;
+  flex-basis: auto;
   height: auto;
+  display: block;
+  max-width: 50%;
 }
 
 .lesson-type {
