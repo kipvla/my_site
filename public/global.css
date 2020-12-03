@@ -4,6 +4,7 @@
   /* --main-bg-color: rgba(60, 68, 70, 0.3); */
   --other-bg-color: rgba(70, 142, 175, 0.2);
   --text: rgb(161, 119, 95);
+  --texthover: rgb(110, 91, 79);
 }
 
 body {
@@ -24,7 +25,7 @@ Navbar
 
 .navbar {
   display: flex;
-  align-items: flex-start;
+  align-items: baseline;
   text-transform: capitalize;
   font-size: 1.5rem;
   font-weight: 100;
@@ -39,7 +40,7 @@ Navbar
 
 .navbar.scrolled {
   background: rgba(60, 68, 70, 0.8);
-  transition: background 700ms;
+  transition: background 1400ms;
   color: rgb(161, 119, 95);
 }
 
@@ -49,6 +50,10 @@ Navbar
   font-weight: 300;
   font-size: 2.5rem;
   float: left;
+}
+
+.navbar-link-brand:hover {
+  color: var(--texthover);
 }
 
 .navbar-items {
@@ -65,7 +70,7 @@ Navbar
 .nav-link:hover {
   text-shadow: 1px black;
   transition: 1s text-shadow;
-  color: rgb(70, 142, 175);
+  color: var(--texthover);
 }
 
 .nav-link-toggle {
@@ -95,9 +100,13 @@ Navbar
   }
   .navbar-toggle-show {
     display: flex;
+    justify-content: end;
   }
   .navbar-link-brand {
     padding: initial;
+  }
+  .nav-link {
+    color: white;
   }
 }
 
@@ -170,6 +179,7 @@ Footer
   /* background: rgba(60, 68, 70, 0.2); */
   padding-bottom: 10px;
   background-color:var(--main-bg-color);
+  font-size: 0.8rem;
 }
 
 .row {
@@ -224,7 +234,7 @@ Hero
 .hero {
   background-image: url("/images/KR28.jpg");
   background-size: cover;
-  background-position: center center;
+  background-position: 48% center;
   height: 800px;
 }
 
@@ -327,10 +337,6 @@ figure {
   margin: 0;
 }
 
-.content {
-  padding-top: 90px;
-}
-
 .row {
   align-items: center;
 }
@@ -374,7 +380,7 @@ Lessons page
 }
 
 #lesson-img {
-  width: 50vw;
+  flex-basis: 50vw;
   height: auto;
 }
 
@@ -391,7 +397,7 @@ Lessons page
     height: auto;
   }
   .lessons-container {
-    flex-wrap: wrap;
+    display: block;
   }
   .name {
     visibility: hidden;

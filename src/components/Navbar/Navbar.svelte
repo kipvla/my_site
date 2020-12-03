@@ -16,7 +16,7 @@
 </script>
 
 <div id="mainNavbar" class="navbar fixed-top">
-  <a href="/" class="nav-link navbar-link-brand font-weight-light">kip <span class="name"> riecken, viola</span></a>
+  <a href="/" class="navbar-link-brand font-weight-light">kip <span class="name"> riecken, viola</span></a>
   <div class="nav-link nav-link-toggle"><i class="fas fa-bars" /></div>
   <nav class="navbar-items">
     <a href="/about" use:link class="nav-link font-weight-light">About</a>
