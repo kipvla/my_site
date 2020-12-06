@@ -15,7 +15,7 @@
       <!-- svelte-ignore a11y-media-has-caption -->
       <div class="color">
         <audio controls>
-          <source src="sounds/STE-026.mp3" type="audio/wav" />
+          <source src="sounds/STE-026.mp3" type="audio/mp3" />
         </audio>
       </div>
     </figure>
