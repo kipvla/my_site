@@ -2085,8 +2085,8 @@ var app = (function () {
     			audio2 = element("audio");
     			add_location(h2, file$c, 2, 4, 50);
     			add_location(figcaption0, file$c, 4, 6, 86);
-    			if (source0.src !== (source0_src_value = "sounds/STE-022.wav")) attr_dev(source0, "src", source0_src_value);
-    			attr_dev(source0, "type", "audio/wav");
+    			if (source0.src !== (source0_src_value = "sounds/STE-027.mp3")) attr_dev(source0, "src", source0_src_value);
+    			attr_dev(source0, "type", "audio/mp3");
     			add_location(source0, file$c, 8, 10, 243);
     			audio0.controls = true;
     			add_location(audio0, file$c, 7, 8, 216);
@@ -2095,7 +2095,7 @@ var app = (function () {
     			add_location(figure0, file$c, 3, 4, 71);
     			add_location(figcaption1, file$c, 13, 6, 359);
     			if (source1.src !== (source1_src_value = "sounds/STE-026.mp3")) attr_dev(source1, "src", source1_src_value);
-    			attr_dev(source1, "type", "audio/wav");
+    			attr_dev(source1, "type", "audio/mp3");
     			add_location(source1, file$c, 17, 10, 514);
     			audio1.controls = true;
     			add_location(audio1, file$c, 16, 8, 487);
