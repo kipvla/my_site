@@ -19,7 +19,7 @@
 {:catch error}
 	<p>An error occurred!</p>
 {/await}
-<div class="container" on:click={response}>
+<div class="container" on:click={fetchImage}>
     <div class="col col-lg-2"></div>
     <div class="col col-lg-8 blog-post">
         <h2>{title}</h2>
