@@ -7,6 +7,7 @@ import (
 	"os"
 	"github.com/jackc/pgx/v4"
 	"context"
+	"time"
 )
 
 func main() {
@@ -18,8 +19,12 @@ func main() {
 	}
 	defer conn.Close(context.Background())
 
+	var id int
+	var date time.Time
 	var title string
-	err = conn.QueryRow(context.Background(), "select title from blogs").Scan(&title)
+	var body string
+	var image string
+	err = conn.QueryRow(context.Background(), "select id, date, title, body, image from blogs").Scan(&id, &date, &title, &body, &image)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "QueryRow failed: %v\n", err)
 		os.Exit(1)
@@ -48,10 +53,26 @@ func main() {
 		c.String(http.StatusOK, "Hello %s", name)
 	})
 
+	// func (date time.Time) String() string {
+    //     return fmt.Sprintf("%b", b)
+	// }	
+
+	// t, _ = time.Parse(time.RFC3339, date)
+
 	r.GET("/index", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "index.html", gin.H{
-			"title": "Main website",
-			"subtitle": title,
+			"title": title,
+			"date": date,
+			"body": body,
+		})
+	})
+
+	r.GET("/blogposts", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"title": title,
+			"date": date,
+			"body": body,
+			"image": image,
 		})
 	})
 

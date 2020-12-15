@@ -1,102 +1,42 @@
-<div class="gallery">
-    <div class="container content">
-        <div class="row align-items-center content">    
-            <div class="col-md-6">
-                <a href="images/jimross.jpg" data-toggle="lightbox">
-                    <div class="card bg-dark text-white bg-white">
-                        <img src="images/jimross.jpg" alt="" class="card-img">
-                        <div class="card-img-overlay">
-                            <!-- <h6 class="card-title"></h6> -->
-                            <p class="card-text"></p>
-                        </div>
-                    </div>
-                </a>
+<script>
+    import { fade, fly } from "svelte/transition";
+    import Modal from "./Modal.svelte";
+    import images from "../images.js";
+    let showModal = false;
+    let defineImage = (image) => {
+      let imgSrc = image;
+    };
+    const allImages = [...images];
+    let imageUrl = '';
+    let bob = '';
+  </script>
+
+  <style>
+      .card {
+          box-shadow: 2px 4px 10px solid black;
+      }
+  </style>
+  
+  {#if showModal}
+    <Modal on:close={() => {
+        showModal = false;
+    }} imgSrc={imageUrl}>
+      <slot name="image" />
+    </Modal>
+  {/if}
+  
+  <div class="container content">
+    <div class="row align-items-center content">
+      {#each allImages as image}
+        <div class="col-md-6">
+          <div class="shadow card bg-dark text-white bg-white" on:click={() => { showModal = true; imageUrl = image.url}}>
+            <img src={image.url} alt={image.alt} class="card-img" />
+            <div class="card-img-overlay">
+              <p class="card-text" />
             </div>
-            <div class="col-md-6">
-                <a href="images/jimross.jpg" data-toggle="lightbox">
-                <div class="card bg-dark text-white bg-white">
-                    <img src="images/laughing.jpg" alt="" class="card-img">
-                    <div class="card-img-overlay">
-                        <!-- <h6 class="card-title"></h6> -->
-                        <p class="card-text"></p>
-                    </div>
-                </div>
-                </a>
-            </div>
+          </div>
         </div>
-        <div class="row align-items-center content">    
-            <div class="col-md-6">
-                <a href="images/jimross.jpg" data-toggle="lightbox">
-                <div class="card bg-dark text-white bg-white">
-                    <img src="images/withmag.jpg" alt="" class="card-img">
-                    <div class="card-img-overlay">
-                        <!-- <h6 class="card-title"></h6> -->
-                        <p class="card-text"></p>
-                    </div>
-                </div>
-                </a>
-            </div>
-            <div class="col-md-6">
-                <a href="images/jimross.jpg" data-toggle="lightbox">
-                <div class="card bg-dark text-white bg-white">
-                    <img src="images/KR13.jpg" alt="" class="card-img">
-                    <div class="card-img-overlay">
-                        <!-- <h6 class="card-title"></h6> -->
-                        <p class="card-text"></p>
-                    </div>
-                </div>
-                </a>
-            </div>
-        </div>
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <a href="images/jimross.jpg" data-toggle="lightbox">
-                <div class="card bg-dark text-white bg-lightblue">
-                    <img src="images/withyenet.jpg" alt="" class="card-img">
-                    <div class="card-img-overlay">
-                        <!-- <h6 class="card-title"></h6> -->
-                        <p class="card-text"></p>
-                    </div>
-                </div>
-                </a>
-            </div>
-            <div class="col-md-6">
-                <a href="images/jimross.jpg" data-toggle="lightbox">
-                <div class="card bg-dark text-white bg-grey">
-                    <img src="images/withpolet.jpg" alt="" class="card-img">
-                    <div class="card-img-overlay">
-                        <!-- <h6 class="card-title"></h6> -->
-                        <p class="card-text"></p>
-                    </div>
-                </div>
-                </a>
-            </div>
-        </div>
-        <div class="row align-items-center content">    
-            <div class="col-md-6">
-                <a href="images/jimross.jpg" data-toggle="lightbox">
-                <div class="card bg-dark text-white bg-white">
-                    <img src="images/quintet.jpg" alt="" class="card-img">
-                    <div class="card-img-overlay">
-                        <!-- <h6 class="card-title"></h6> -->
-                        <p class="card-text"></p>
-                    </div>
-                </div>
-                </a>
-            </div>
-            <div class="col-md-6">
-                <a href="images/fernando-student.jpg" data-toggle="lightbox">
-                <div class="card bg-dark text-white bg-white">
-                    <img src="images/fernando-student.jpg" alt="" class="card-img">
-                    <div class="card-img-overlay">
-                        <!-- <h6 class="card-title"></h6> -->
-                        <p class="card-text"></p>
-                    </div>
-                </div>
-                </a>
-            </div>
-        </div>
-    
+      {/each}
     </div>
-</div>
+  </div>
 

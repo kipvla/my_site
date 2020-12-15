@@ -3,6 +3,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
+import dev from 'rollup-plugin-dev';
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -36,6 +37,7 @@ export default {
 		file: 'public/build/bundle.js'
 	},
 	plugins: [
+
 		svelte({
 			// enable run-time checks when not in production
 			dev: !production,
@@ -59,7 +61,14 @@ export default {
 
 		// In dev mode, call `npm run start` once
 		// the bundle has been generated
-		!production && serve(),
+		//!production && serve(),
+
+		dev({
+			dirs: ['public'],
+			spa: 'public/index.html', 
+			port: 5000, 
+			'/api/*': 'http://localhost:8080/',
+		}),
 
 		// Watch the `public` directory and refresh the
 		// browser on changes when not in production
@@ -68,6 +77,7 @@ export default {
 		// If we're building for production (npm run build
 		// instead of npm run dev), minify
 		production && terser()
+
 	],
 	watch: {
 		clearScreen: false
