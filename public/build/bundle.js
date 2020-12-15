@@ -2311,11 +2311,11 @@ var app = (function () {
     			p3 = element("p");
     			p3.textContent = "A passion for education has led him to over 15 years of teaching\n        experience, from beginning level to college and professional, in English\n        and in Spanish. He maintains an online Zoom violin and viola studio.";
     			attr_dev(p0, "mb-5", "");
-    			add_location(p0, file$b, 9, 6, 156);
-    			add_location(p1, file$b, 15, 6, 409);
-    			add_location(p2, file$b, 24, 6, 879);
-    			add_location(p3, file$b, 34, 6, 1456);
-    			attr_dev(div0, "class", "row bio-text text-justify clearfix");
+    			add_location(p0, file$b, 9, 6, 160);
+    			add_location(p1, file$b, 15, 6, 413);
+    			add_location(p2, file$b, 24, 6, 883);
+    			add_location(p3, file$b, 34, 6, 1460);
+    			attr_dev(div0, "class", "row bio-text text-justify clearfix p-3");
     			add_location(div0, file$b, 8, 4, 101);
     			attr_dev(div1, "class", "container svelte-um51l");
     			add_location(div1, file$b, 7, 2, 73);

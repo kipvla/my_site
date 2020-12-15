@@ -6,7 +6,7 @@
 
 <div class="bio">
   <div class="container">
-    <div class="row bio-text text-justify clearfix">
+    <div class="row bio-text text-justify clearfix p-3">
       <p mb-5>
         In a varied career as a violist and violinist, Kip has performed with the
         Chicago, St. Louis and New World Symphonies, the Civic Orchestra of
