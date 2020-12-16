@@ -10,7 +10,8 @@ import (
 	"time"
 	// "strings"
 	// "github.com/jackc/pgproto3/v2"
-	"log"
+	// "log"
+	// "testing"
 )
 
 func main() {
@@ -33,26 +34,43 @@ func main() {
 		os.Exit(1)
 	}
 
-	ids := make([]string, 0)
-	rows, err := conn.Query(context.Background(), "select url from images")
+	rows, err := conn.Query(context.Background(), "select generate_series(1,$1)", 100)
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "QueryRow failed: %v\n", err)
-		os.Exit(1)
+		fmt.Printf("conn.Query failed: %v", err)
 	}
-	fmt.Println(rows)
-	defer rows.Close()
+
+	var sum int32
+	var rowCount int32
 	for rows.Next() {
-		var id string
-		if err := rows.Scan(&id); err != nil {
-			// Check for a scan error.
-			// Query rows will be closed with defer.
-			fmt.Println(err)
-			log.Fatal(err)
+		var n int32
+		if err := rows.Scan(&n); err != nil {
+			fmt.Printf("Row scan failed: %v", err)
 		}
-		ids = append(ids, id)
-		fmt.Println(id)
+		sum += n
+		rowCount++
 	}
-	fmt.Println(ids)
+	fmt.Println(sum)
+
+	// ids := make([]string, 0)
+	// rows, err := conn.Query(context.Background(), "select url from images")
+	// if err != nil {
+	// 	fmt.Fprintf(os.Stderr, "QueryRow failed: %v\n", err)
+	// 	os.Exit(1)
+	// }
+	// fmt.Println(rows)
+	// defer rows.Close()
+	// for rows.Next() {
+	// 	var id string
+	// 	if err := rows.Scan(&id); err != nil {
+	// 		// Check for a scan error.
+	// 		// Query rows will be closed with defer.
+	// 		fmt.Println(err)
+	// 		log.Fatal(err)
+	// 	}
+	// 	ids = append(ids, id)
+	// 	fmt.Println(id)
+	// }
+	// fmt.Println(ids)
 
 	// urls := make([]string, 0)
 	// rows, err := conn.Query(context.Background(), "SELECT url FROM images")
