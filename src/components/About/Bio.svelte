@@ -1,18 +1,29 @@
+<script>
+  let less = true;
+</script>
+
 <style>
   .container {
     width: 90%;
   }
+
+  /* p:not(:first-child) {
+    display: none;
+  } */
 </style>
 
 <div class="bio">
   <div class="container">
-    <div class="row bio-text text-justify clearfix p-3">
-      <p mb-5>
+    <div class="row bio-text text-justify clearfix p-3 d-flex flex-column">
+      <p>
         In a varied career as a violist and violinist, Kip has performed with the
         Chicago, St. Louis and New World Symphonies, the Civic Orchestra of
         Chicago, and alongside Yo-Yo Ma and Tabea Zimmerman.
       </p>
       ​
+      {#if less}
+      <button on:click={() => less = !less}>See More</button>
+      {:else}
       <p>
         Kip's passion for engaging audiences drives myriad personal initiatives.
         As a New World Symphony fellow, he worked with artistic director Michael
@@ -37,6 +48,8 @@
         experience, from beginning level to college and professional, in English
         and in Spanish. He maintains an online Zoom violin and viola studio.
       </p>
+      <button on:click={() => less = !less}>See Less</button>
+      {/if}
     </div>
 
   </div>

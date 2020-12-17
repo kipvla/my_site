@@ -1,5 +1,5 @@
 
-(function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35732/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(window.document);
+(function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(window.document);
 var app = (function () {
     'use strict';
 
@@ -2282,45 +2282,145 @@ var app = (function () {
 
     const file$b = "src/components/About/Bio.svelte";
 
-    function create_fragment$c(ctx) {
-    	let div2;
-    	let div1;
-    	let div0;
+    // (26:6) {:else}
+    function create_else_block(ctx) {
     	let p0;
     	let t1;
     	let p1;
     	let t3;
     	let p2;
     	let t5;
-    	let p3;
+    	let button;
+    	let mounted;
+    	let dispose;
+
+    	const block = {
+    		c: function create() {
+    			p0 = element("p");
+    			p0.textContent = "Kip's passion for engaging audiences drives myriad personal initiatives.\n        As a New World Symphony fellow, he worked with artistic director Michael\n        Tilson Thomas to program, produce, and host a concert exploring the role\n        of the artist in today’s world, and led 16 New World Symphony fellows in\n        studying Spanish and leading public performances in which all musicians\n        provided Spanish commentary.";
+    			t1 = text("\n      ​\n      ");
+    			p1 = element("p");
+    			p1.textContent = "Kip has spent 10 years studying the Alexander Technique (AT), a method for\n        enhancing coordination and embodied thoughtfulness which he credits for\n        bringing new life to his music-making. As a Civic Orchestra of Chicago\n        fellow, Kip designed and implemented The Rediscovering Musician in which\n        two Civic Orchestra of Chicago colleagues received eight Alexander\n        Technique lessons as he followed and documented their individual journeys.\n        Kip maintains a YouTube channel about Alexander Technique.";
+    			t3 = text("\n      ​\n      ");
+    			p2 = element("p");
+    			p2.textContent = "A passion for education has led him to over 15 years of teaching\n        experience, from beginning level to college and professional, in English\n        and in Spanish. He maintains an online Zoom violin and viola studio.";
+    			t5 = space();
+    			button = element("button");
+    			button.textContent = "See Less";
+    			add_location(p0, file$b, 26, 6, 613);
+    			add_location(p1, file$b, 35, 6, 1083);
+    			add_location(p2, file$b, 45, 6, 1660);
+    			add_location(button, file$b, 50, 6, 1912);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, p0, anchor);
+    			insert_dev(target, t1, anchor);
+    			insert_dev(target, p1, anchor);
+    			insert_dev(target, t3, anchor);
+    			insert_dev(target, p2, anchor);
+    			insert_dev(target, t5, anchor);
+    			insert_dev(target, button, anchor);
+
+    			if (!mounted) {
+    				dispose = listen_dev(button, "click", /*click_handler_1*/ ctx[2], false, false, false);
+    				mounted = true;
+    			}
+    		},
+    		p: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(p0);
+    			if (detaching) detach_dev(t1);
+    			if (detaching) detach_dev(p1);
+    			if (detaching) detach_dev(t3);
+    			if (detaching) detach_dev(p2);
+    			if (detaching) detach_dev(t5);
+    			if (detaching) detach_dev(button);
+    			mounted = false;
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_else_block.name,
+    		type: "else",
+    		source: "(26:6) {:else}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (24:6) {#if less}
+    function create_if_block(ctx) {
+    	let button;
+    	let mounted;
+    	let dispose;
+
+    	const block = {
+    		c: function create() {
+    			button = element("button");
+    			button.textContent = "See More";
+    			add_location(button, file$b, 24, 6, 537);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, button, anchor);
+
+    			if (!mounted) {
+    				dispose = listen_dev(button, "click", /*click_handler*/ ctx[1], false, false, false);
+    				mounted = true;
+    			}
+    		},
+    		p: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(button);
+    			mounted = false;
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block.name,
+    		type: "if",
+    		source: "(24:6) {#if less}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$c(ctx) {
+    	let div2;
+    	let div1;
+    	let div0;
+    	let p;
+    	let t1;
+
+    	function select_block_type(ctx, dirty) {
+    		if (/*less*/ ctx[0]) return create_if_block;
+    		return create_else_block;
+    	}
+
+    	let current_block_type = select_block_type(ctx);
+    	let if_block = current_block_type(ctx);
 
     	const block = {
     		c: function create() {
     			div2 = element("div");
     			div1 = element("div");
     			div0 = element("div");
-    			p0 = element("p");
-    			p0.textContent = "In a varied career as a violist and violinist, Kip has performed with the\n        Chicago, St. Louis and New World Symphonies, the Civic Orchestra of\n        Chicago, and alongside Yo-Yo Ma and Tabea Zimmerman.";
+    			p = element("p");
+    			p.textContent = "In a varied career as a violist and violinist, Kip has performed with the\n        Chicago, St. Louis and New World Symphonies, the Civic Orchestra of\n        Chicago, and alongside Yo-Yo Ma and Tabea Zimmerman.";
     			t1 = text("\n      ​\n      ");
-    			p1 = element("p");
-    			p1.textContent = "Kip's passion for engaging audiences drives myriad personal initiatives.\n        As a New World Symphony fellow, he worked with artistic director Michael\n        Tilson Thomas to program, produce, and host a concert exploring the role\n        of the artist in today’s world, and led 16 New World Symphony fellows in\n        studying Spanish and leading public performances in which all musicians\n        provided Spanish commentary.";
-    			t3 = text("\n      ​\n      ");
-    			p2 = element("p");
-    			p2.textContent = "Kip has spent 10 years studying the Alexander Technique (AT), a method for\n        enhancing coordination and embodied thoughtfulness which he credits for\n        bringing new life to his music-making. As a Civic Orchestra of Chicago\n        fellow, Kip designed and implemented The Rediscovering Musician in which\n        two Civic Orchestra of Chicago colleagues received eight Alexander\n        Technique lessons as he followed and documented their individual journeys.\n        Kip maintains a YouTube channel about Alexander Technique.";
-    			t5 = text("\n      ​\n      ");
-    			p3 = element("p");
-    			p3.textContent = "A passion for education has led him to over 15 years of teaching\n        experience, from beginning level to college and professional, in English\n        and in Spanish. He maintains an online Zoom violin and viola studio.";
-    			attr_dev(p0, "mb-5", "");
-    			add_location(p0, file$b, 9, 6, 160);
-    			add_location(p1, file$b, 15, 6, 413);
-    			add_location(p2, file$b, 24, 6, 883);
-    			add_location(p3, file$b, 34, 6, 1460);
-    			attr_dev(div0, "class", "row bio-text text-justify clearfix p-3");
-    			add_location(div0, file$b, 8, 4, 101);
-    			attr_dev(div1, "class", "container svelte-um51l");
-    			add_location(div1, file$b, 7, 2, 73);
+    			if_block.c();
+    			add_location(p, file$b, 17, 6, 272);
+    			attr_dev(div0, "class", "row bio-text text-justify clearfix p-3 d-flex flex-column");
+    			add_location(div0, file$b, 16, 4, 194);
+    			attr_dev(div1, "class", "container svelte-gi1nxz");
+    			add_location(div1, file$b, 15, 2, 166);
     			attr_dev(div2, "class", "bio");
-    			add_location(div2, file$b, 6, 0, 53);
+    			add_location(div2, file$b, 14, 0, 146);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2329,19 +2429,28 @@ var app = (function () {
     			insert_dev(target, div2, anchor);
     			append_dev(div2, div1);
     			append_dev(div1, div0);
-    			append_dev(div0, p0);
+    			append_dev(div0, p);
     			append_dev(div0, t1);
-    			append_dev(div0, p1);
-    			append_dev(div0, t3);
-    			append_dev(div0, p2);
-    			append_dev(div0, t5);
-    			append_dev(div0, p3);
+    			if_block.m(div0, null);
     		},
-    		p: noop,
+    		p: function update(ctx, [dirty]) {
+    			if (current_block_type === (current_block_type = select_block_type(ctx)) && if_block) {
+    				if_block.p(ctx, dirty);
+    			} else {
+    				if_block.d(1);
+    				if_block = current_block_type(ctx);
+
+    				if (if_block) {
+    					if_block.c();
+    					if_block.m(div0, null);
+    				}
+    			}
+    		},
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div2);
+    			if_block.d();
     		}
     	};
 
@@ -2356,16 +2465,29 @@ var app = (function () {
     	return block;
     }
 
-    function instance$c($$self, $$props) {
+    function instance$c($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots("Bio", slots, []);
+    	let less = true;
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<Bio> was created with unknown prop '${key}'`);
     	});
 
-    	return [];
+    	const click_handler = () => $$invalidate(0, less = !less);
+    	const click_handler_1 = () => $$invalidate(0, less = !less);
+    	$$self.$capture_state = () => ({ less });
+
+    	$$self.$inject_state = $$props => {
+    		if ("less" in $$props) $$invalidate(0, less = $$props.less);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [less, click_handler, click_handler_1];
     }
 
     class Bio extends SvelteComponentDev {
@@ -2838,7 +2960,7 @@ var app = (function () {
     const get_image_slot_context$1 = ctx => ({});
 
     // (20:2) {#if showModal}
-    function create_if_block(ctx) {
+    function create_if_block$1(ctx) {
     	let modal;
     	let current;
 
@@ -2887,7 +3009,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block.name,
+    		id: create_if_block$1.name,
     		type: "if",
     		source: "(20:2) {#if showModal}",
     		ctx
@@ -3025,7 +3147,7 @@ var app = (function () {
     	let div1;
     	let div0;
     	let current;
-    	let if_block = /*showModal*/ ctx[0] && create_if_block(ctx);
+    	let if_block = /*showModal*/ ctx[0] && create_if_block$1(ctx);
     	let each_value = /*allImages*/ ctx[2];
     	validate_each_argument(each_value);
     	let each_blocks = [];
@@ -3074,7 +3196,7 @@ var app = (function () {
     						transition_in(if_block, 1);
     					}
     				} else {
-    					if_block = create_if_block(ctx);
+    					if_block = create_if_block$1(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
     					if_block.m(t.parentNode, t);
@@ -4151,12 +4273,12 @@ var app = (function () {
     });
 
     // (40:0) {#if $activeRoute !== null && $activeRoute.route === route}
-    function create_if_block$1(ctx) {
+    function create_if_block$2(ctx) {
     	let current_block_type_index;
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block_1, create_else_block];
+    	const if_block_creators = [create_if_block_1, create_else_block$1];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -4219,7 +4341,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$1.name,
+    		id: create_if_block$2.name,
     		type: "if",
     		source: "(40:0) {#if $activeRoute !== null && $activeRoute.route === route}",
     		ctx
@@ -4229,7 +4351,7 @@ var app = (function () {
     }
 
     // (43:2) {:else}
-    function create_else_block(ctx) {
+    function create_else_block$1(ctx) {
     	let current;
     	const default_slot_template = /*#slots*/ ctx[10].default;
     	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[9], get_default_slot_context);
@@ -4268,7 +4390,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block.name,
+    		id: create_else_block$1.name,
     		type: "else",
     		source: "(43:2) {:else}",
     		ctx
@@ -4383,7 +4505,7 @@ var app = (function () {
     function create_fragment$i(ctx) {
     	let if_block_anchor;
     	let current;
-    	let if_block = /*$activeRoute*/ ctx[3] !== null && /*$activeRoute*/ ctx[3].route === /*route*/ ctx[7] && create_if_block$1(ctx);
+    	let if_block = /*$activeRoute*/ ctx[3] !== null && /*$activeRoute*/ ctx[3].route === /*route*/ ctx[7] && create_if_block$2(ctx);
 
     	const block = {
     		c: function create() {
@@ -4407,7 +4529,7 @@ var app = (function () {
     						transition_in(if_block, 1);
     					}
     				} else {
-    					if_block = create_if_block$1(ctx);
+    					if_block = create_if_block$2(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
     					if_block.m(if_block_anchor.parentNode, if_block_anchor);

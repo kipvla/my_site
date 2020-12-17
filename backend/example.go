@@ -7,10 +7,10 @@ import (
 	"os"
 	"github.com/jackc/pgx/v4"
 	"context"
-	"time"
+	// "time"
 	// "strings"
 	// "github.com/jackc/pgproto3/v2"
-	"log"
+	// "log"
 )
 
 func main() {
@@ -22,37 +22,67 @@ func main() {
 	}
 	defer conn.Close(context.Background())
 
-	var id int
-	var date time.Time
-	var title string
-	var body string
-	var image string
-	err = conn.QueryRow(context.Background(), "select id, date, title, body, image from blogs").Scan(&id, &date, &title, &body, &image)
+	// var id int
+	// var date time.Time
+	// var title string
+	// var body string
+	// var image string
+	// err = conn.QueryRow(context.Background(), "select id, date, title, body, image from blogs").Scan(&id, &date, &title, &body, &image)
+	// if err != nil {
+	// 	fmt.Fprintf(os.Stderr, "QueryRow failed: %v\n", err)
+	// 	os.Exit(1)
+	// }
+
+	rows, err := conn.Query(context.Background(), "select title from movies")
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "QueryRow failed: %v\n", err)
-		os.Exit(1)
+		fmt.Printf("conn.Query failed: %v", err)
 	}
 
-	ids := make([]string, 0)
-	rows, err := conn.Query(context.Background(), "select url from images")
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "QueryRow failed: %v\n", err)
-		os.Exit(1)
-	}
-	fmt.Println(rows)
-	defer rows.Close()
+	var ids = make([]string, 0)
+	var rowCount int32
 	for rows.Next() {
-		var id string
-		if err := rows.Scan(&id); err != nil {
-			// Check for a scan error.
-			// Query rows will be closed with defer.
-			fmt.Println(err)
-			log.Fatal(err)
+		var n string
+		if err := rows.Scan(&n); err != nil {
+			fmt.Printf("Row scan failed: %v", err)
 		}
-		ids = append(ids, id)
+		ids = append(ids, n)
+		rowCount++
+	}
+	for _, id := range ids {
 		fmt.Println(id)
 	}
-	fmt.Println(ids)
+
+	os.Exit(0)
+
+	////
+
+	// ids := make([]string, 0)
+	// rows, err := conn.Query(context.Background(), "select url from images;")
+	// if err != nil {
+	// 	fmt.Fprintf(os.Stderr, "QueryRow failed: %v\n", err)
+	// 	os.Exit(1)
+	// }
+	// fmt.Println(rows)
+	// //defer rows.Close()
+	// for rows.Next() {
+	// 	fmt.Println("rows.next()")
+	// 	var id string
+	// 	if err := rows.Scan(&id); err != nil {
+	// 		// Check for a scan error.
+	// 		// Query rows will be closed with defer.
+	// 		fmt.Println("row scan error:")
+	// 		fmt.Println(err)
+	// 		log.Fatal(err)
+	// 	}
+	// 	ids = append(ids, id)
+	// 	fmt.Println("appending id:")
+	// 	fmt.Println(id)
+	// }
+	// fmt.Println("ids is:")
+	// for _, id := range ids {
+	// 	fmt.Println(id)
+	// }
+	
 
 	// urls := make([]string, 0)
 	// rows, err := conn.Query(context.Background(), "SELECT url FROM images")
@@ -150,22 +180,22 @@ func main() {
 
 	// t, _ = time.Parse(time.RFC3339, date)
 
-	r.GET("/index", func(c *gin.Context) {
-		c.HTML(http.StatusOK, "index.html", gin.H{
-			"title": title,
-			"date": date,
-			"body": body,
-		})
-	})
+	// r.GET("/index", func(c *gin.Context) {
+	// 	c.HTML(http.StatusOK, "index.html", gin.H{
+	// 		"title": title,
+	// 		"date": date,
+	// 		"body": body,
+	// 	})
+	// })
 
-	r.GET("/blogposts", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"title": title,
-			"date": date,
-			"body": body,
-			"image": image,
-		})
-	})
+	// r.GET("/blogposts", func(c *gin.Context) {
+	// 	c.JSON(200, gin.H{
+	// 		"title": title,
+	// 		"date": date,
+	// 		"body": body,
+	// 		"image": image,
+	// 	})
+	// })
 
 	r.POST("/post", func(c *gin.Context) {
 		id := c.Query("id")
