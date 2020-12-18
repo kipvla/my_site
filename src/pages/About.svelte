@@ -6,11 +6,15 @@
   onMount(() => window.scrollTo(0,document.body.scrollHeight));
 </script>
 
-<Bio />
-<Audio />
-<Gallery />
-<div class="container d-flex justify-content-center">
+<div class="container d-flex justify-content-center flex-column align-content-center">
+  <Bio />
+  <Audio />
+  <Gallery />
   <button class="btn mt-5" on:click={ () => window.scrollTo(0,0) }>
     Top
   </button>
+</div>
+
+<div class="container d-flex justify-content-center">
+  
 </div>

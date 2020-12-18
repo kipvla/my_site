@@ -25,12 +25,10 @@
       class="row bio-text text-justify clearfix p-3 d-flex flex-column justify-content-between">
       <img
         src="images/KR32.jpg"
-        class="m-5 rounded-circle shadow"
+        class="my-5 rounded-circle shadow"
         id="top-pic"
         alt="Me" 
-        in:fade/>
-
-        <!-- <div class="primp" style=on:click={}>hi</div> -->
+      />
 
       {#if less}
         <p>
@@ -74,7 +72,7 @@
         </p>
 
         <figure class="mb-3">
-          <!-- <figcaption>Bach Violin Sonata</figcaption> -->
+          <figcaption>Bach Violin Sonata</figcaption>
           <!-- svelte-ignore a11y-media-has-caption -->
           <div class="color">
             <audio controls>
