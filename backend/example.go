@@ -1,55 +1,87 @@
 package main
 
 import (
-	"github.com/gin-gonic/gin"
-	"net/http"
 	"fmt"
-	"os"
-	"github.com/jackc/pgx/v4"
-	"context"
+	"net/http"
 	"time"
+
+	"github.com/gin-gonic/gin"
+	"github.com/jmoiron/sqlx"
+	_ "github.com/lib/pq"
+
 	// "strings"
 	// "github.com/jackc/pgproto3/v2"
-	// "log"
+	"log"
 	// "testing"
 )
 
+type Blog struct {
+	ID    int `db:"id"`
+	Title string
+	Date  time.Time
+	Body  string
+	Image string
+}
+
 func main() {
-	os.Setenv("DATABASE_URL", "postgresql://localhost/postgres")
-	conn, err := pgx.Connect(context.Background(), os.Getenv("DATABASE_URL"))
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Unable to connect to database: %v\n", err)
-		os.Exit(1)
-	}
-	defer conn.Close(context.Background())
+	// os.Setenv("DATABASE_URL", "postgresql://localhost/postgres")
+	// conn, err := pgx.Connect(context.Background(), os.Getenv("DATABASE_URL"))
+	// if err != nil {
+	// 	fmt.Fprintf(os.Stderr, "Unable to connect to database: %v\n", err)
+	// 	os.Exit(1)
+	// }
+	// defer conn.Close(context.Background())
 
-	var id int
-	var date time.Time
-	var title string
-	var body string
-	var image string
-	err = conn.QueryRow(context.Background(), "select id, date, title, body, image from blogs").Scan(&id, &date, &title, &body, &image)
+	// var id int
+	// var date time.Time
+	// var title string
+	// var body string
+	// var image string
+	// err = conn.QueryRow(context.Background(), "select id, date, title, body, image from blogs").Scan(&id, &date, &title, &body, &image)
+	// if err != nil {
+	// 	fmt.Fprintf(os.Stderr, "QueryRow failed: %v\n", err)
+	// 	os.Exit(1)
+	// }
+
+	db, err := sqlx.Connect("postgres", "user=postgres dbname=postgres sslmode=disable")
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "QueryRow failed: %v\n", err)
-		os.Exit(1)
+		log.Fatalln(err)
 	}
 
-	rows, err := conn.Query(context.Background(), "select generate_series(1,$1)", 100)
-	if err != nil {
-		fmt.Printf("conn.Query failed: %v", err)
-	}
+	blog := Blog{}
+	err = db.Get(&blog, "SELECT * FROM blogs WHERE id = 1")
+	fmt.Printf("%#v\n", blog)
+	fmt.Printf("%v\n", blog.Title)
 
-	var sum int32
-	var rowCount int32
+	place := Blog{}
+	places := make([]Blog, 0)
+	rows, err := db.Queryx("SELECT * FROM blogs")
 	for rows.Next() {
-		var n int32
-		if err := rows.Scan(&n); err != nil {
-			fmt.Printf("Row scan failed: %v", err)
+		err := rows.StructScan(&place)
+		if err != nil {
+			log.Fatalln(err)
 		}
-		sum += n
-		rowCount++
+		fmt.Printf("%#v\n", place)
+		places = append(places, place)
 	}
-	fmt.Println(sum)
+	fmt.Println(places)
+
+	// rows, err := conn.Query(context.Background(), "select generate_series(1,$1)", 100)
+	// if err != nil {
+	// 	fmt.Printf("conn.Query failed: %v", err)
+	// }
+
+	// var sum int32
+	// var rowCount int32
+	// for rows.Next() {
+	// 	var n int32
+	// 	if err := rows.Scan(&n); err != nil {
+	// 		fmt.Printf("Row scan failed: %v", err)
+	// 	}
+	// 	sum += n
+	// 	rowCount++
+	// }
+	// fmt.Println(sum)
 
 	// ids := make([]string, 0)
 	// rows, err := conn.Query(context.Background(), "select url from images")
@@ -163,25 +195,26 @@ func main() {
 	})
 
 	// func (date time.Time) String() string {
-    //     return fmt.Sprintf("%b", b)
-	// }	
+	//     return fmt.Sprintf("%b", b)
+	// }
 
 	// t, _ = time.Parse(time.RFC3339, date)
 
 	r.GET("/index", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "index.html", gin.H{
-			"title": title,
-			"date": date,
-			"body": body,
+			"title": blog.Title,
+			"date":  blog.Date,
+			"body":  blog.Body,
 		})
 	})
 
 	r.GET("/blogposts", func(c *gin.Context) {
 		c.JSON(200, gin.H{
-			"title": title,
-			"date": date,
-			"body": body,
-			"image": image,
+			"title":  blog.Title,
+			"date":   blog.Date,
+			"body":   blog.Body,
+			"image":  blog.Image,
+			"places": places,
 		})
 	})
 
