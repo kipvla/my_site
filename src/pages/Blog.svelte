@@ -11,6 +11,5 @@
 <div class="content">
     <div class="container">
         <BlogPost />
-        <BlogPost />
     </div>
 </div>
