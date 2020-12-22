@@ -13,6 +13,10 @@ import (
 	// "github.com/jackc/pgproto3/v2"
 	"log"
 	// "testing"
+	// "time"
+	// "strings"
+	// "github.com/jackc/pgproto3/v2"
+	// "log"
 )
 
 type Blog struct {
@@ -90,19 +94,25 @@ func main() {
 	// 	os.Exit(1)
 	// }
 	// fmt.Println(rows)
-	// defer rows.Close()
+	// //defer rows.Close()
 	// for rows.Next() {
+	// 	fmt.Println("rows.next()")
 	// 	var id string
 	// 	if err := rows.Scan(&id); err != nil {
 	// 		// Check for a scan error.
 	// 		// Query rows will be closed with defer.
+	// 		fmt.Println("row scan error:")
 	// 		fmt.Println(err)
 	// 		log.Fatal(err)
 	// 	}
 	// 	ids = append(ids, id)
+	// 	fmt.Println("appending id:")
 	// 	fmt.Println(id)
 	// }
-	// fmt.Println(ids)
+	// fmt.Println("ids is:")
+	// for _, id := range ids {
+	// 	fmt.Println(id)
+	// }
 
 	// urls := make([]string, 0)
 	// rows, err := conn.Query(context.Background(), "SELECT url FROM images")

@@ -8,7 +8,6 @@
     };
     const allImages = [...images];
     let imageUrl = '';
-    let bob = '';
   </script>
 
   <style>

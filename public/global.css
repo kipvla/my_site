@@ -242,19 +242,19 @@ Hero
 About
 *****************************************************************************/
 
-.bio {
-  background-image: url("/images/KR32.jpg");
+/* .bio { */
+  /* background-image: url("/images/KR32.jpg");
   background-size: cover;
   padding-top: 150px;
-  height: 100vh;
-}
+  height: 100vh; */
+/* } */
 
 .bio-text {
   color: black;
   background-color: rgb(255, 255, 255, 0.8);
-  height: 500px;
+  /* height: 500px; */
   border-radius: 10px;
-  overflow: scroll;
+  /* overflow: scroll; */
   padding: 1px 1px;
 }
 
