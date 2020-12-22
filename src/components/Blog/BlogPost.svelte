@@ -1,38 +1,47 @@
 <script>
-    // export let title = "My first post";
-    // export let date = "Friday November 13, 2020";
-    // export let time = "4:00 PM";
-    // export let image = "images/KR11.jpg";
-    // export let body = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda ducimus distinctio necessitatibus quo repellendus sed explicabo eveniet, omnis blanditiis reiciendis amet perferendis, quod minima consequatur dolores eius, cumque repudiandae praesentium?";
-    // const fetchImage = (async () => {
-    //     const response = await fetch("http://localhost:8080/blogposts")
-    //         .then(data => { console.log(data); return data; })
-    //         .catch(data => { console.log(data); return data; })
-    //     return response.json();
-    // })()
-    const dateFormat = date => date.toString().split(/-|T|:/);
-    const fetchBlogs = fetch("http://localhost:8080/blogposts")
-            .then(data => { console.log(data); return data.json()} )
-            .catch(data => { console.log(data); return data.json()});
+
+    const parseDate = date => {
+        console.log(date);
+        date.Date.toString().split(/-|T|:/)
+    };
+    // const arr = parseDate(place);
+    const formatDate = arr => `${arr[3]}:${arr[4]}, ${arr[1]}/${arr[2]}/${arr[0]}`;
+
+    const server = `http://${window.location.hostname}:8080`;
+
+    const fetchBlogs = fetch(`${server}/blogposts`)
+        .then((data) => {
+            console.log('succ', data);
+            return data.json();
+        })
+        .catch((data) => {
+            console.log('error', data);
+            return data;
+        });
 </script>
 
-
-<div class="container">
-    <div class="col col-lg-2"></div>
-    <div class="col col-lg-8 blog-post">
-        {#await fetchBlogs}
-            <p>...waiting</p>
-        {:then data}
-            <!-- svelte-ignore a11y-img-redundant-alt -->
-            <h2>{data.title}</h2>
-            <img class="blog-image" src="{data.image}" alt="">
-            <h5>{`${dateFormat(data.date)[3]}: ${dateFormat(data.date)[4]}, ${dateFormat(data.date)[1]}/${dateFormat(data.date)[2]}/${dateFormat(data.date)[0]}`}</h5>
-            <!-- <h5>{data.time}</h5> -->
-            <p class="justify-content-center">{data.body}</p>
-        {:catch error}
-            <p>An error occurred!  {`${error}`}</p>
-        {/await}
+{#await fetchBlogs}
+    <div class="container d-flex justify-content-center mt-5">
+        <p>...waiting</p>
     </div>
-    <div class="col col-lg-2"></div>
-    <hr>
-</div>
+{:then data}
+    {#each data.places as place}
+        <div class="container">
+            <div class="col col-lg-2" />
+            <div class="col col-lg-8 blog-post">
+                <!-- svelte-ignore a11y-img-redundant-alt -->
+                <h2 class="text-capitalize mb-3">{place.Title}</h2>
+                <img class="blog-image img-thumbnail" src={place.Image} alt="" />
+                <h5 class="mt-4">
+                    {formatDate(parseDate(place))}
+                </h5>
+                <!-- <h5>{data.time}</h5> -->
+                <p class="justify-content-center my-4 text-dark">{place.Body}</p>
+            </div>
+            <div class="col col-lg-2" />
+            <hr />
+        </div>
+    {/each}
+{:catch error}
+    <p>An error occurred! {`${error}`}</p>
+{/await}
