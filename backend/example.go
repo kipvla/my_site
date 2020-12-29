@@ -10,7 +10,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/jmoiron/sqlx"
-	// _ "github.com/lib/pq"
+	_ "github.com/lib/pq"
 	// "strings"
 	// "testing"
 	// "time"
@@ -27,12 +27,24 @@ type Blog struct {
 }
 
 func main() {
+	// os.Setenv("DATABASE_URL", "postgresql://localhost/postgres")
+	// conn, err := pgx.Connect(context.Background(), os.Getenv("DATABASE_URL"))
+	// if err != nil {
+	// 	fmt.Fprintf(os.Stderr, "Unable to connect to database: %v\n", err)
+	// 	os.Exit(1)
+	// }
+	// defer conn.Close(context.Background())
 
 	// var id int
 	// var date time.Time
 	// var title string
 	// var body string
 	// var image string
+	// err = conn.QueryRow(context.Background(), "select id, date, title, body, image from blogs").Scan(&id, &date, &title, &body, &image)
+	// if err != nil {
+	// 	fmt.Fprintf(os.Stderr, "QueryRow failed: %v\n", err)
+	// 	os.Exit(1)
+	// }
 
 	db, err := sqlx.Connect("postgres", "user=postgres dbname=postgres sslmode=disable")
 	if err != nil {
@@ -56,6 +68,18 @@ func main() {
 		places = append(places, place)
 	}
 	fmt.Println(places)
+
+	// var sum int32
+	// var rowCount int32
+	// for rows.Next() {
+	// 	var n int32
+	// 	if err := rows.Scan(&n); err != nil {
+	// 		fmt.Printf("Row scan failed: %v", err)
+	// 	}
+	// 	sum += n
+	// 	rowCount++
+	// }
+	// fmt.Println(sum)
 
 	files, err := ioutil.ReadDir("../public/images")
 	if err != nil {
