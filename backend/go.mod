@@ -7,6 +7,7 @@ require (
 	github.com/go-playground/validator/v10 v10.4.1 // indirect
 	github.com/golang/protobuf v1.4.3 // indirect
 	github.com/jackc/pgproto3/v2 v2.0.6
+	github.com/jackc/pgx v3.6.2+incompatible
 	github.com/jackc/pgx/v4 v4.10.0
 	github.com/jmoiron/sqlx v1.2.0
 	github.com/json-iterator/go v1.1.10 // indirect

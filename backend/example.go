@@ -2,21 +2,20 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"net/http"
 	"time"
 
+	"io/ioutil"
+
 	"github.com/gin-gonic/gin"
 	"github.com/jmoiron/sqlx"
-	_ "github.com/lib/pq"
-
+	// _ "github.com/lib/pq"
 	// "strings"
-	// "github.com/jackc/pgproto3/v2"
-	"log"
 	// "testing"
 	// "time"
 	// "strings"
 	// "github.com/jackc/pgproto3/v2"
-	// "log"
 )
 
 type Blog struct {
@@ -28,24 +27,12 @@ type Blog struct {
 }
 
 func main() {
-	// os.Setenv("DATABASE_URL", "postgresql://localhost/postgres")
-	// conn, err := pgx.Connect(context.Background(), os.Getenv("DATABASE_URL"))
-	// if err != nil {
-	// 	fmt.Fprintf(os.Stderr, "Unable to connect to database: %v\n", err)
-	// 	os.Exit(1)
-	// }
-	// defer conn.Close(context.Background())
 
 	// var id int
 	// var date time.Time
 	// var title string
 	// var body string
 	// var image string
-	// err = conn.QueryRow(context.Background(), "select id, date, title, body, image from blogs").Scan(&id, &date, &title, &body, &image)
-	// if err != nil {
-	// 	fmt.Fprintf(os.Stderr, "QueryRow failed: %v\n", err)
-	// 	os.Exit(1)
-	// }
 
 	db, err := sqlx.Connect("postgres", "user=postgres dbname=postgres sslmode=disable")
 	if err != nil {
@@ -70,22 +57,39 @@ func main() {
 	}
 	fmt.Println(places)
 
-	// rows, err := conn.Query(context.Background(), "select generate_series(1,$1)", 100)
+	files, err := ioutil.ReadDir("../public/images")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	for _, file := range files {
+		fmt.Println(file.Name())
+	}
+
+	// os.Setenv("DATABASE_URL", "postgresql://localhost/postgres")
+	// conn, err := pgx.Connect(context.Background(), os.Getenv("DATABASE_URL"))
+	// rows, err := conn.Query(context.Background(), "select url from images")
 	// if err != nil {
 	// 	fmt.Printf("conn.Query failed: %v", err)
 	// }
 
-	// var sum int32
+	// var ids = make([]string, 0)
 	// var rowCount int32
 	// for rows.Next() {
-	// 	var n int32
+	// 	var n string
 	// 	if err := rows.Scan(&n); err != nil {
 	// 		fmt.Printf("Row scan failed: %v", err)
 	// 	}
-	// 	sum += n
+	// 	ids = append(ids, n)
 	// 	rowCount++
 	// }
-	// fmt.Println(sum)
+	// if err := rows.Err(); err != nil {
+	// 	fmt.Fprintf(os.Stderr, "Rows.Scan failed: %v\n", err)
+	// }
+
+	// for _, id := range ids {
+	// 	fmt.Println(id)
+	// }
 
 	// ids := make([]string, 0)
 	// rows, err := conn.Query(context.Background(), "select url from images")
@@ -218,15 +222,15 @@ func main() {
 		})
 	})
 
-	r.GET("/blogposts", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"title":  blog.Title,
-			"date":   blog.Date,
-			"body":   blog.Body,
-			"image":  blog.Image,
-			"places": places,
-		})
-	})
+	// r.GET("/blogposts", func(c *gin.Context) {
+	// 	c.JSON(200, gin.H{
+	// 		"title":  blog.Title,
+	// 		"date":   blog.Date,
+	// 		"body":   blog.Body,
+	// 		"image":  blog.Image,
+	// 		"places": places,
+	// 	})
+	// })
 
 	r.POST("/post", func(c *gin.Context) {
 		id := c.Query("id")
