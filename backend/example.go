@@ -47,7 +47,7 @@ func main() {
 
 	dbpwd := os.Getenv("DBPWD")
 
-	db, err := sqlx.Connect("postgres", "user=postgres dbname=postgres password="+dbpwd+" sslmode=disable")
+	db, err := sqlx.Connect("postgres", "user=postgres dbname=postgres  sslmode=disable password="+dbpwd)
 	if err != nil {
 		log.Fatalln(err)
 	}
@@ -238,15 +238,15 @@ func main() {
 		})
 	})
 
-	// r.GET("/blogposts", func(c *gin.Context) {
-	// 	c.JSON(200, gin.H{
-	// 		"title":  blog.Title,
-	// 		"date":   blog.Date,
-	// 		"body":   blog.Body,
-	// 		"image":  blog.Image,
-	// 		"places": places,
-	// 	})
-	// })
+	r.GET("/blogposts", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"title":  blog.Title,
+			"date":   blog.Date,
+			"body":   blog.Body,
+			"image":  blog.Image,
+			"places": places,
+		})
+	})
 
 	r.POST("/post", func(c *gin.Context) {
 		id := c.Query("id")
