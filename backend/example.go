@@ -4,9 +4,8 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 	"time"
-
-	"io/ioutil"
 
 	"github.com/gin-gonic/gin"
 	"github.com/jmoiron/sqlx"
@@ -46,7 +45,9 @@ func main() {
 	// 	os.Exit(1)
 	// }
 
-	db, err := sqlx.Connect("postgres", "user=postgres dbname=postgres sslmode=disable")
+	dbpwd := os.Getenv("DBPWD")
+
+	db, err := sqlx.Connect("postgres", "user=postgres dbname=postgres password="+dbpwd+" sslmode=disable")
 	if err != nil {
 		log.Fatalln(err)
 	}
@@ -80,15 +81,6 @@ func main() {
 	// 	rowCount++
 	// }
 	// fmt.Println(sum)
-
-	files, err := ioutil.ReadDir("../public/images")
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	for _, file := range files {
-		fmt.Println(file.Name())
-	}
 
 	// os.Setenv("DATABASE_URL", "postgresql://localhost/postgres")
 	// conn, err := pgx.Connect(context.Background(), os.Getenv("DATABASE_URL"))
