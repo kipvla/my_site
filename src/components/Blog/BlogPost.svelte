@@ -2,10 +2,14 @@
 
     const parseDate = date => {
         console.log(date);
-        date.Date.toString().split(/-|T|:/)
+        return date.Date.toString().split(/-|T|:/)
     };
-    // const arr = parseDate(place);
-    const formatDate = arr => `${arr[3]}:${arr[4]}, ${arr[1]}/${arr[2]}/${arr[0]}`;
+
+    const formatDate = arr => {
+        console.log(arr);
+        return `${arr[3]}:${arr[4]}, ${arr[1]}/${arr[2]}/${arr[0]}`;
+    }
+
 
     const server = `http://${window.location.hostname}:8080`;
 
