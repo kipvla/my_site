@@ -47,39 +47,19 @@ func main() {
 	fmt.Println(places)
 
 	r := gin.Default()
-	r.LoadHTMLGlob("../public/index.html")
-	r.Static("build", "../public/build")
-	r.Static("images", "../public/images")
-	r.Static("sounds", "../public/sounds")
-	r.StaticFile("favicon-16x16.png", "../public/favicon-16x16.png")
-	r.StaticFile("favicon-32x32.png", "../public/favicon-32x32.png")
-	r.StaticFile("site.webmanifest", "../public/site.webmanifest")
-	r.StaticFile("global.css", "../public/global.css")
-	r.StaticFile("favicon.ico", "../public/favicon.ico")
-	r.StaticFile("apple-touch-icon.png", "../public/apple-touch-icon.png")
-	r.StaticFile("android-chrome-192x192.png", "../public/android-chrome-192x192.png")
-	r.StaticFile("android-chrome-512x512.png", "../public/android-chrome-512x512.png")
 
-	r.GET("/ping", func(c *gin.Context) {
+	r.GET("/api/ping", func(c *gin.Context) {
 		c.JSON(200, gin.H{
 			"message": "pong",
 		})
 	})
 
-	r.GET("/user/:name", func(c *gin.Context) {
+	r.GET("/api/user/:name", func(c *gin.Context) {
 		name := c.Param("name")
 		c.String(http.StatusOK, "Hello %s", name)
 	})
 
-	r.GET("/index", func(c *gin.Context) {
-		c.HTML(http.StatusOK, "index.html", gin.H{
-			"title": blog.Title,
-			"date":  blog.Date,
-			"body":  blog.Body,
-		})
-	})
-
-	r.GET("/blogposts", func(c *gin.Context) {
+	r.GET("/api/blogposts", func(c *gin.Context) {
 		c.JSON(200, gin.H{
 			"title":  blog.Title,
 			"date":   blog.Date,
@@ -89,7 +69,7 @@ func main() {
 		})
 	})
 
-	r.POST("/post", func(c *gin.Context) {
+	r.POST("/api/post", func(c *gin.Context) {
 		id := c.Query("id")
 		page := c.DefaultQuery("page", "0")
 		name := c.PostForm("name")

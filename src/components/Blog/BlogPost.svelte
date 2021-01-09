@@ -10,10 +10,7 @@
         return `${arr[3]}:${arr[4]}, ${arr[1]}/${arr[2]}/${arr[0]}`;
     }
 
-
-    const server = `http://${window.location.hostname}:8080`;
-
-    const fetchBlogs = fetch(`${server}/blogposts`)
+    const fetchBlogs = fetch(`/api/blogposts`)
         .then((data) => {
             console.log('succ', data);
             return data.json();

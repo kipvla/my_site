@@ -67,7 +67,7 @@ export default {
 			dirs: ['public'],
 			spa: 'public/index.html', 
 			port: 5000, 
-			'/api/*': 'http://localhost:8080/',
+			// '/api/*': 'http://localhost:8080/',
 		}),
 
 		// Watch the `public` directory and refresh the
