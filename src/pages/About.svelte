@@ -7,6 +7,7 @@
 </script>
 
 <div class="container d-flex justify-content-center flex-column align-content-center">
+
   <Bio />
   <Audio />
   <Gallery />
