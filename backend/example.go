@@ -7,6 +7,8 @@ import (
 	"os"
 	"time"
 
+	"strconv"
+
 	"github.com/gin-gonic/gin"
 	"github.com/jmoiron/sqlx"
 	_ "github.com/lib/pq"
@@ -67,6 +69,17 @@ func main() {
 			"image":  blog.Image,
 			"places": places,
 		})
+	})
+
+	r.GET("api/blogposts/:id", func(c *gin.Context) {
+		id := c.Param("id")
+		if num, err := strconv.Atoi(id); err == nil {
+			// +1 to convert index to id
+			post := places[num-1]
+			c.JSON(200, gin.H{
+				"post": post,
+			})
+		}
 	})
 
 	r.POST("/api/post", func(c *gin.Context) {
