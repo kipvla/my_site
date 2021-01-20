@@ -11,7 +11,7 @@
 
 <div class="content">
     <div class="container">
-        <John />
+        <!-- <John /> -->
         <BlogPost />
     </div>
 </div>

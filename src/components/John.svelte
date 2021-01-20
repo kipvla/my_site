@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
     import Bob from './Bob.svelte';
     const fetchBlogs = fetch(`/api/blogposts`)
         .then((data) => {
@@ -19,4 +19,4 @@
     {#each data.places as place}
         <Bob title={place.Title} body={place.Body} image={place.Image} />
     {/each}
-{/await}
+{/await} -->

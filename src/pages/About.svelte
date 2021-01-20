@@ -6,6 +6,12 @@
   onMount(() => window.scrollTo(0,document.body.scrollHeight));
 </script>
 
+<style>
+  button {
+    width: fit-content;
+  }
+</style>
+
 <div class="container d-flex justify-content-center flex-column align-content-center">
 
   <Bio />

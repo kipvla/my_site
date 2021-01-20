@@ -41,7 +41,11 @@ Navbar
 .navbar.scrolled {
   background: rgba(60, 68, 70, 0.8);
   transition: background 1400ms;
-  color: rgb(161, 119, 95);
+}
+
+.navbar.scrolled > .navbar-items {
+  color: white;
+  transition: color 1s;
 }
 
 .navbar-link-brand {
@@ -53,6 +57,10 @@ Navbar
 }
 
 .navbar-link-brand:hover {
+  /* text-shadow: 1px 1px 1px darkslategrey; */
+  /* color: white;
+  transition: color 1s ease-in-out; */
+  text-decoration: none;
   color: var(--texthover);
 }
 
@@ -68,9 +76,9 @@ Navbar
 }
 
 .nav-link:hover {
-  text-shadow: 1px black;
-  transition: 1s text-shadow;
-  color: var(--texthover);
+  /* text-shadow: 1px 1px 1px darkslategrey; */
+  color: white;
+  transition: color 500ms;
 }
 
 .nav-link-toggle {
@@ -345,11 +353,11 @@ figure {
 Blog
 *****************************************************************************/
 
-.blog-post {
+/* .blog-post {
   text-align: center;
   justify-content: center;
   margin: auto;
-}
+} */
 
 /*****************************************************************************
 Lessons page
