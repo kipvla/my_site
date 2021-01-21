@@ -14,11 +14,11 @@ export default [
         url: "images/withmag.jpg",
         alt: ""
     },
-    {
-        id: 4,
-        url: "images/KR13.jpg",
-        alt: ""
-    },
+    // {
+    //     id: 4,
+    //     url: "images/KR13.jpg",
+    //     alt: ""
+    // },
     {
         id: 5,
         url: "images/withyenet.jpg",

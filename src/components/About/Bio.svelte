@@ -2,36 +2,22 @@
   let less = true;
   import Carousel from "../Carousel.svelte";
   import { fade, fly } from "svelte/transition";
-
 </script>
 
-<style>
-  /* .container {
-    width: 90%;
-  } */
-
-  /* p:not(:first-child) {
-    display: none;
-  } */
-
-  #top-pic {
-    height: 60vh;
-  }
-</style>
-
-<div class="bio">
+<div class="bio d-flex">
   <div class="container">
     <div
-      class="row bio-text text-justify clearfix p-3 d-flex flex-column justify-content-between">
+      class="row bio-text text-justify clearfix p-3 d-flex flex-column justify-content-between"
+    >
       <img
-        src="images/KR32.jpg"
+        src="images/KR32-min.jpg"
         class="my-5 rounded-circle shadow"
         id="top-pic"
-        alt="Me" 
+        alt="Me"
       />
 
       {#if less}
-        <p>
+        <p id="first">
           From an early age, Kip’s tireless work ethic has had two drives -
           being accountable and helping others. Through music and academics, he
           explored this accountability and mentorship, regularly leading in a
@@ -81,7 +67,7 @@
           </div>
         </figure>
 
-        <p in:fade="{{ duration: 2000 }}">
+        <p in:fade={{ duration: 2000 }}>
           This discovery pushed him to change his degree midway through college,
           focusing on pre-health, driven by the possibilities he saw in a new
           approach to education. What was behind these new possibilities, and
@@ -96,10 +82,11 @@
 
         <a
           class="mb-3"
-          href="https://chicago.suntimes.com/2017/6/11/18378502/yo-yo-ma-performs-concert-for-peace-at-st-sabina-church">Performance
-          with Yo-Yo Ma</a>
+          href="https://chicago.suntimes.com/2017/6/11/18378502/yo-yo-ma-performs-concert-for-peace-at-st-sabina-church"
+          >Performance with Yo-Yo Ma</a
+        >
 
-        <p in:fade="{{ duration: 2000 }}">
+        <p in:fade={{ duration: 2000 }}>
           As a fellow at the Civic Orchestra of Chicago and New World Symphony,
           he designed and led several initiatives aimed at inspiring these
           ideals of accountability and companionship in himself and amongst his
@@ -109,12 +96,11 @@
           from teacher Lisa DeAngelis, as well as a group class and blog.
         </p>
 
-        <a
-          class="mb-3"
-          href="https://rediscoveringmusician.wordpress.com/">Rediscovering
-          Musician</a>
+        <a class="mb-3" href="https://rediscoveringmusician.wordpress.com/"
+          >Rediscovering Musician</a
+        >
 
-        <p in:fade="{{ duration: 2000 }}">
+        <p in:fade={{ duration: 2000 }}>
           In Miami, Kip designed and led Farm to Stage, a project solidifying
           the New World Symphony’s relationship with its community in Miami, in
           Kip’s home state of Florida, in which he partnered with the Farmworker
@@ -129,7 +115,7 @@
 
         Pics from these projects
 
-        <p in:fade="{{ duration: 2000 }}">
+        <p in:fade={{ duration: 2000 }}>
           Kip has engaged in a lively discussion with the worldwide Alexander
           Technique community, from attending the 2015 International Congress
           for the AT in Limerick, Ireland on scholarship, to participating in
@@ -140,6 +126,8 @@
         </p>
 
         YouTube, pics from Ireland Congress, link to page on AT?
+
+        <img class="img-thumbnail my-4" src="images/REarle.JPG" alt="">
 
         <div class="video mb-3">
           <div class="container">
@@ -153,7 +141,8 @@
                     src="https://www.youtube.com/embed/pN1ZA6hWd3s"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen />
+                    allowfullscreen
+                  />
                 </div>
               </div>
               <div class="col-3" />
@@ -179,7 +168,7 @@
         Pics from CAYO, MUSAID
 
         <!-- <div class="mb-3"> -->
-          <Carousel />
+        <Carousel />
         <!-- </div> -->
 
         <p>
@@ -205,6 +194,28 @@
         <button class="btn" on:click={() => (less = !less)}>See Less</button>
       {/if}
     </div>
-
   </div>
 </div>
+
+<style>
+  #top-pic {
+    height: 60vh;
+  }
+
+  p {
+    display: block;
+    max-width: 100%;
+  }
+  #first {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  @media only screen and (min-width: 769px) {
+    #first {
+      white-space: nowrap;
+    }
+    .img-thumbnail {
+      max-width: 70%;
+    }
+  }
+</style>

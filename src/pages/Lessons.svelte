@@ -1,10 +1,11 @@
 <script>
+  import { fly } from 'svelte/transition';
+
   import Lesson from "../components/Lessons/Lesson.svelte";
-  import LessonOption from "../components/Lessons/LessonOption.svelte";
 </script>
 
 <div class="lessons-container">
-  <img src="images/KR9.jpg" id="lesson-img" alt="" />
+  <img src="images/KR13-min.jpg" id="lesson-img" alt="" transition:fly="{{y: 200, duration: 4000}}"/>
   
   <Lesson />
   <!-- <LessonOption /> -->

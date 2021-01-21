@@ -46,3 +46,14 @@
 {:catch error}
     <p>An error occurred! {`${error}`}</p>
 {/await}
+
+<style>
+    .blog-post {
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+}
+.img-thumbnail {
+    max-width: 50%;
+}
+</style>

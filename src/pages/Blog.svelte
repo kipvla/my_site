@@ -1,6 +1,6 @@
 <script>
     import BlogPost from '../components/Blog/BlogPost.svelte'
-    import John from '../components/John.svelte'
+    // import John from '../components/John.svelte'
 </script>
 
 <style>

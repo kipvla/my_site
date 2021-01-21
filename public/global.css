@@ -112,6 +112,7 @@ Navbar
   }
   .navbar-link-brand {
     padding: initial;
+    max-height: 4rem;
   }
   .nav-link {
     color: white;
@@ -208,14 +209,6 @@ Contact Form
   text-shadow: 4px black;
 }
 
-input,
-textarea {
-  background: rgb(255, 255, 255, 0.5);
-  border-radius: 4px;
-  border: none;
-  box-shadow: 1px 1px 1px black;
-}
-
 .contact {
   background-image: url("/images/KR12.jpg");
   background-size: cover;
@@ -233,17 +226,6 @@ textarea {
   background-color: var(--text);
   border: none;
   border-radius: 5px;
-}
-
-/*****************************************************************************
-Hero
-*****************************************************************************/
-
-.hero {
-  background-image: url("/images/KR28.jpg");
-  background-size: cover;
-  background-position: 48% center;
-  height: 800px;
 }
 
 /*****************************************************************************
@@ -348,16 +330,6 @@ figure {
 .row {
   align-items: center;
 }
-
-/*****************************************************************************
-Blog
-*****************************************************************************/
-
-/* .blog-post {
-  text-align: center;
-  justify-content: center;
-  margin: auto;
-} */
 
 /*****************************************************************************
 Lessons page

@@ -22,3 +22,12 @@
         <input type="submit" class="btn btn-primary" value="Submit">
       </form>
 </div>
+
+<style>
+    input,
+textarea {
+  background: rgb(255, 255, 255, 0.5);
+  /* border-radius: 4px; */
+  border: none;
+}
+</style>

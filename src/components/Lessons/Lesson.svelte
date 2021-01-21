@@ -1,10 +1,14 @@
+<script>
+  import {fly} from 'svelte/transition';
+</script>
+
 <style>
     .container {
       flex-basis: auto;
     }
   </style>
 
-<div class="container text-left">
+<div class="container text-left" transition:fly="{{x: 200, duration: 4000}}">
     <div class="lesson-option">
       <div>
         <!-- <p>Why study with me?</p>
