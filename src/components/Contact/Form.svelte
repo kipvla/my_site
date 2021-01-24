@@ -1,6 +1,6 @@
-<div class="contact-form container" style="text-align: center;">
-    <hr>
-    <form action="https://formspree.io/f/xpzolpwz" method="POST">
+<div class="contact-form container d-flex py-5 my-5 flex-column justify-content-around align-items-center flex-wrap" style="text-align: center;">
+    <h1 class="display-3 py-4">Say hello</h1>
+    <form action="https://formspree.io/f/xpzolpwz" class="text-left" method="POST">
         <div class="form-group">
             <label>
                 Your name:
@@ -16,18 +16,27 @@
         <div class="form-group">
             <label>
                 Your message:
-                <textarea name="message"></textarea>
+                <textarea name="message" col="100"></textarea>
             </label>
         </div>
-        <input type="submit" class="btn btn-primary" value="Submit">
+        <input type="submit" class="btn" value="Submit">
       </form>
 </div>
 
 <style>
-    input,
-textarea {
+    /* input,
+textarea:not(.btn) {
   background: rgb(255, 255, 255, 0.5);
-  /* border-radius: 4px; */
+  border-radius: 4px;
   border: none;
+} */
+textarea {
+    width: 300px;
+  height: 150px;
+}
+@media only screen and (min-width: 769px) {
+    .contact-form {
+        max-width: 50vw;
+    }
 }
 </style>

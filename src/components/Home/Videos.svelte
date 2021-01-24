@@ -1,8 +1,8 @@
 <div class="video">
-  <div class="container">
+  <div class="container py-5">
     <div class="row">
       <div class="col-12 col-md-6">
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, eaque nam temporibus sapiente aut vitae officia incidunt maxime dolorem natus nostrum aperiam quo alias labore, voluptates dolores soluta. Repellat, quo?</p>
+        Kip on YouTube
       </div>
       <div class="col-12 col-md-6">
         <div class="videos">

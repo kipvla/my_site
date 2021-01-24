@@ -1,5 +1,4 @@
-<div class="container">
-  <hr>
+<div class="container py-5">
   <div class="footer">
     <div class="social">
       <a href="https://www.instagram.com"><i
@@ -8,7 +7,7 @@
           class="nav-link fab fa-facebook-square" /></a>
       <a href="https://www.twitter.com"><i class="nav-link fab fa-youtube" /></a>
     </div>
-    &copy; Copyright 2020 Kip Riecken
+    &copy; Copyright 2021 Kip Riecken
     <br />
     Proudly self-designed.
   </div>

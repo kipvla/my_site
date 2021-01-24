@@ -1,31 +1,24 @@
 <script>
-  import {fly} from 'svelte/transition';
+  import { fly } from "svelte/transition";
 </script>
 
-<style>
-    .container {
-      flex-basis: auto;
-    }
-  </style>
-
-<div class="container text-left" transition:fly="{{x: 200, duration: 4000}}">
-    <div class="lesson-option">
-      <div>
-        <!-- <p>Why study with me?</p>
-        <p>I know you have lots of options.
-        </p> -->
-<p>In over twenty years of orchestral playing, and almost 30 years of playing music, I have noticed for musicians to both not play to their potential and to not enjoy what they do.
-  I want to help change that.</p>
-
-<p>Together we will:</p>
-
-<ul>
-    <li>Deepen your connection with the music you’re playing</li>
-    <li>Find a more sustainable way of playing your instrument</li>
-    <li>Create a more balanced approach to practicing and performing</li>
-    <li>Learn to prevent injuries and feel better playing music</li>
-</ul>
-      </div>
+<div class="container text-left mt-5" in:fly={{ x: 200, delay:1000, duration: 4000 }}>
+  <div class="lesson-option">
+    <div>
+      <a href="mailto:kipriecken@gmail.com" class="btn btn-lg my-5 align-self-center">Contact Kip</a>
+      <p>
+        In over twenty years of orchestral playing, and almost 30 years of
+        playing music, I have noticed for musicians to both not play to their
+        potential and to not enjoy what they do. I want to help change that. Together we will:
+      </p>
+      <ul>
+        <li>Deepen your connection with the music</li>
+        <li>Find a more sustainable way of playing</li>
+        <li>Create a more balanced approach to practicing and performing</li>
+        <li>Learn to prevent injuries and feel better</li>
+      </ul>
+    </div>
+    <div class="container text-left pt-4">
       <div class="lesson-type">
         <h3>Viola lesson</h3>
         <h5>30 or 60 minutes</h5>
@@ -43,4 +36,4 @@
       </div>
     </div>
   </div>
-
+</div>

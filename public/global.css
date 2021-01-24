@@ -23,11 +23,15 @@ body {
 Navbar
 *****************************************************************************/
 
+.icon-bar {
+  color: var(--text);
+}
+
 .navbar {
   display: flex;
   align-items: baseline;
   text-transform: capitalize;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 100;
   transition: background 700ms;
 }
@@ -52,7 +56,7 @@ Navbar
   color:var(--text);
   /* text-shadow: 1px 1px black; */
   font-weight: 300;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   float: left;
 }
 
@@ -209,13 +213,6 @@ Contact Form
   text-shadow: 4px black;
 }
 
-.contact {
-  background-image: url("/images/KR12.jpg");
-  background-size: cover;
-  background-position: center 59%;
-  height: 500px;
-}
-
 .contact-form {
   padding-top: 20px;
   background-color:var(--main-bg-color);
@@ -248,17 +245,12 @@ About
   padding: 1px 1px;
 }
 
-.short-bio {
-  background-color:var(--main-bg-color);
-  /* background: linear-gradient(90deg, rgba(60, 68, 70, 0.4), white); */
-}
-
 /*****************************************************************************
 Videos
 *****************************************************************************/
 
 .video {
-  background-color:var(--main-bg-color);
+  background-color: antiquewhite;
   /* background: linear-gradient(90deg, rgba(60, 68, 70, 0.4), white); */
   width: 100%;
 }
@@ -342,11 +334,11 @@ Lessons page
 
 .lesson-option {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin-top: 40vh;
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* margin-top: 40vh; */
 }
 
 /* .lesson-container {
@@ -382,8 +374,5 @@ Lessons page
   }
   .name {
     visibility: hidden;
-  }
-  .lesson-option {
-    margin-top: 10vh;
   }
 }
