@@ -1,8 +1,9 @@
 <script>
     import {fade} from 'svelte/transition';
+    import {quintIn} from 'svelte/easing';
 </script>
 
-<div class="hero" in:fade="{{duration: 3000}}"/>
+<div class="hero" in:fade="{{delay: 300, duration: 2500, quintIn: 1000}}"/>
 
 <style>
   .hero {

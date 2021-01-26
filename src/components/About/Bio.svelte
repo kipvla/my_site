@@ -78,7 +78,7 @@
           >{#if more}
             Less
           {:else}
-            More
+            Find out more...
           {/if}</button
         >
       {/if}
