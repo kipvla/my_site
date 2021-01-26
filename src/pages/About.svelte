@@ -12,15 +12,14 @@
   <Bio />
   <!-- <Audio /> -->
   <!-- <Gallery /> -->
-  <button class="btn mt-5" on:click={() => window.scrollTo(0, 0)}> Top </button>
+  <!-- <button class="btn mt-5" on:click={() => window.scrollTo(0, 0)}> Top </button> -->
 </div>
 
 <style>
-  button {
+  /* button {
     width: fit-content;
     justify-content: center;
-  }
-
+  } */
   .container {
     align-items: center;
   }

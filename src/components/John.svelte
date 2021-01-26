@@ -1,6 +1,6 @@
-<!-- <script>
+<script>
     import Bob from './Bob.svelte';
-    const fetchBlogs = fetch(`/api/blogposts`)
+    const fetchBlogs = fetch(`/api/blogposts/1`)
         .then((data) => {
             console.log("succ", data);
             return data.json();
@@ -16,7 +16,6 @@
         <p>...waiting</p>
     </div>
 {:then data}
-    {#each data.places as place}
-        <Bob title={place.Title} body={place.Body} image={place.Image} />
-    {/each}
-{/await} -->
+{console.log(data)}
+        <Bob title={data.post.Title} body={data.post.Body} image={data.post.Image} />
+{/await}

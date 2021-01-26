@@ -1,6 +1,9 @@
 <style>
+  .carousel {
+    width: 50%;
+  }
     .carousel-item {
-  height: 32rem;
+  /* height: 32rem; */
   background:black;
   position: relative;
   background-position: center;
@@ -9,8 +12,11 @@
 
 @media only screen and (max-width: 768px) {
     .carousel-item {
-  height: 16rem;
+  /* height: 16rem; */
     }
+    .carousel {
+    width: 70%;
+  }
 }
 
 /* .car-overlay {

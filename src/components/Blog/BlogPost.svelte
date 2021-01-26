@@ -1,4 +1,5 @@
 <script>
+    import {link} from 'svelte-routing';
 
     const parseDate = date => {
         console.log(date);
@@ -38,6 +39,7 @@
                 </h5>
                 <!-- <h5>{data.time}</h5> -->
                 <p class="justify-content-center my-4 text-dark">{place.Body}</p>
+                <a href="/blog/{place.ID}" use:link>Read more</a>
             </div>
             <div class="col col-lg-2" />
             <hr />

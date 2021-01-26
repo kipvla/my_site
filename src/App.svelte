@@ -5,6 +5,7 @@
   import Contact from "./pages/Contact.svelte";
   import Lessons from "./pages/Lessons.svelte";
   import About from "./pages/About.svelte";
+  import John from "./components/John.svelte";
   // router
   import { Router, Route, Link } from "svelte-routing";
   // components
@@ -18,6 +19,7 @@
   <Route path="/about" component={About} />
   <Route path="/lessons" component={Lessons} />
   <Route path="/blog" component={Blog} />
+  <Route path="/blog/:id" component={John}/>
   <Route path="/contact" component={Contact} />
   <Footer />
 </Router>
