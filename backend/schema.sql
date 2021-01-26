@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS blogs;
 
 CREATE TABLE blogs (id serial primary key, title VARCHAR(50) not null, body text not null, date timestamp not null, image text not null);
 
-INSERT INTO blogs (title, body, date, image) VALUES ('First Post', 'I practice active rest just about every day, and have been doing so for about 10 years. I welcome you to try it.
+INSERT INTO blogs (title, body, date, image) VALUES ('How to lie down', 'I practice active rest just about every day, and have been doing so for about 10 years. I welcome you to try it.
 
 The basics:
 
