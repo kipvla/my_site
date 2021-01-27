@@ -36,9 +36,10 @@
     <h2 class="text-capitalize mb-3">{Title}</h2>
     <img
       class="blog-image img-thumbnail"
-      src={Image}
+      src="/{Image}"
       alt=""
     />
+    
     <h5 class="mt-4">
       {formatDate(parseDate(Date))}
     </h5>
