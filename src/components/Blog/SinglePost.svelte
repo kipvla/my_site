@@ -26,3 +26,9 @@
 {:catch error}
   <p>An error occurred! {`${error}`}</p>
 {/await}
+
+<style>
+  .content {
+    padding-top: 90px;
+  }
+</style>
