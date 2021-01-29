@@ -1,4 +1,4 @@
-<div class="container py-5">
+<div class="container pt-3">
   <div class="footer">
     <div class="social">
       <a href="https://www.instagram.com"><i

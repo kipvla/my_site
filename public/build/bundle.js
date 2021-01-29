@@ -7279,7 +7279,7 @@ var app = (function () {
     			add_location(br, file$j, 10, 4, 409);
     			attr_dev(div1, "class", "footer");
     			add_location(div1, file$j, 1, 2, 31);
-    			attr_dev(div2, "class", "container py-5");
+    			attr_dev(div2, "class", "container pt-3");
     			add_location(div2, file$j, 0, 0, 0);
     		},
     		l: function claim(nodes) {
