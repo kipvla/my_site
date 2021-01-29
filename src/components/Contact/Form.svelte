@@ -20,6 +20,7 @@
             </label>
         </div>
         <input type="submit" class="btn" value="Submit">
+        <input type="hidden" name="_next" value="//site.io/thanks.html" />
       </form>
 </div>
 

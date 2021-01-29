@@ -1,5 +1,5 @@
 
-(function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(window.document);
+(function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35732/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(window.document);
 var app = (function () {
     'use strict';
 
@@ -958,9 +958,6 @@ var app = (function () {
     function quadOut(t) {
         return -t * (t - 2.0);
     }
-    function quintIn(t) {
-        return t * t * t * t * t;
-    }
 
     function fade(node, { delay = 0, duration = 400, easing = identity }) {
         const o = +getComputedStyle(node).opacity;
@@ -1013,7 +1010,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			attr_dev(div, "class", "hero svelte-10ijpeq");
-    			add_location(div, file, 5, 0, 107);
+    			add_location(div, file, 5, 0, 106);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1021,14 +1018,16 @@ var app = (function () {
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
     		},
-    		p: noop,
+    		p: function update(new_ctx, [dirty]) {
+    			ctx = new_ctx;
+    		},
     		i: function intro(local) {
     			if (!div_intro) {
     				add_render_callback(() => {
     					div_intro = create_in_transition(div, fade, {
     						delay: 300,
     						duration: 2500,
-    						quintIn: 1000
+    						easing: identity
     					});
 
     					div_intro.start();
@@ -1061,7 +1060,7 @@ var app = (function () {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<Hero> was created with unknown prop '${key}'`);
     	});
 
-    	$$self.$capture_state = () => ({ fade, quintIn });
+    	$$self.$capture_state = () => ({ fade, linear: identity });
     	return [];
     }
 
@@ -2940,7 +2939,7 @@ var app = (function () {
     const { console: console_1 } = globals;
     const file$4 = "src/components/Blog/BlogPost.svelte";
 
-    // (49:4) {:else}
+    // (50:4) {:else}
     function create_else_block$1(ctx) {
     	let a;
     	let link_action;
@@ -2952,7 +2951,7 @@ var app = (function () {
     			a = element("a");
     			a.textContent = "Back to blogs";
     			attr_dev(a, "href", "/blog");
-    			add_location(a, file$4, 49, 4, 1170);
+    			add_location(a, file$4, 50, 4, 1159);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -2974,14 +2973,14 @@ var app = (function () {
     		block,
     		id: create_else_block$1.name,
     		type: "else",
-    		source: "(49:4) {:else}",
+    		source: "(50:4) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (47:4) {#if main}
+    // (48:4) {#if main}
     function create_if_block$1(ctx) {
     	let a;
     	let t;
@@ -2995,7 +2994,7 @@ var app = (function () {
     			a = element("a");
     			t = text("Read more");
     			attr_dev(a, "href", a_href_value = "/blog/" + /*ID*/ ctx[1]);
-    			add_location(a, file$4, 47, 4, 1110);
+    			add_location(a, file$4, 48, 4, 1099);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -3022,7 +3021,7 @@ var app = (function () {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(47:4) {#if main}",
+    		source: "(48:4) {#if main}",
     		ctx
     	});
 
@@ -3087,19 +3086,19 @@ var app = (function () {
     			attr_dev(h2, "class", "text-capitalize mb-3");
     			add_location(h2, file$4, 35, 4, 747);
     			attr_dev(img, "class", "blog-image img-thumbnail svelte-1m6u72j");
-    			if (img.src !== (img_src_value = "http://localhost/" + /*Image*/ ctx[2])) attr_dev(img, "src", img_src_value);
+    			if (img.src !== (img_src_value = "/" + /*Image*/ ctx[2])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
     			add_location(img, file$4, 36, 4, 797);
     			attr_dev(h5, "class", "mt-4");
-    			add_location(h5, file$4, 41, 4, 902);
+    			add_location(h5, file$4, 42, 4, 891);
     			attr_dev(p, "class", "justify-content-center my-4 text-dark");
     			toggle_class(p, "text-truncate", /*main*/ ctx[5]);
-    			add_location(p, file$4, 45, 4, 1004);
+    			add_location(p, file$4, 46, 4, 993);
     			attr_dev(div1, "class", "col col-lg-8 blog-post svelte-1m6u72j");
     			add_location(div1, file$4, 33, 2, 656);
     			attr_dev(div2, "class", "col col-lg-2");
-    			add_location(div2, file$4, 52, 2, 1230);
-    			add_location(hr, file$4, 53, 2, 1261);
+    			add_location(div2, file$4, 53, 2, 1219);
+    			add_location(hr, file$4, 54, 2, 1250);
     			attr_dev(div3, "class", "container");
     			add_location(div3, file$4, 31, 0, 599);
     		},
@@ -3131,7 +3130,7 @@ var app = (function () {
     		p: function update(ctx, [dirty]) {
     			if (dirty & /*Title*/ 1) set_data_dev(t1, /*Title*/ ctx[0]);
 
-    			if (dirty & /*Image*/ 4 && img.src !== (img_src_value = "http://localhost/" + /*Image*/ ctx[2])) {
+    			if (dirty & /*Image*/ 4 && img.src !== (img_src_value = "/" + /*Image*/ ctx[2])) {
     				attr_dev(img, "src", img_src_value);
     			}
 
@@ -3788,6 +3787,8 @@ var app = (function () {
     	let textarea;
     	let t7;
     	let input2;
+    	let t8;
+    	let input3;
 
     	const block = {
     		c: function create() {
@@ -3812,6 +3813,8 @@ var app = (function () {
     			textarea = element("textarea");
     			t7 = space();
     			input2 = element("input");
+    			t8 = space();
+    			input3 = element("input");
     			attr_dev(h1, "class", "display-3 py-4");
     			add_location(h1, file$7, 1, 4, 150);
     			attr_dev(input0, "type", "text");
@@ -3837,6 +3840,10 @@ var app = (function () {
     			attr_dev(input2, "class", "btn");
     			input2.value = "Submit";
     			add_location(input2, file$7, 21, 8, 799);
+    			attr_dev(input3, "type", "hidden");
+    			attr_dev(input3, "name", "_next");
+    			input3.value = "//site.io/thanks.html";
+    			add_location(input3, file$7, 22, 8, 856);
     			attr_dev(form, "action", "https://formspree.io/f/xpzolpwz");
     			attr_dev(form, "class", "text-left");
     			attr_dev(form, "method", "POST");
@@ -3869,6 +3876,8 @@ var app = (function () {
     			append_dev(label2, textarea);
     			append_dev(form, t7);
     			append_dev(form, input2);
+    			append_dev(form, t8);
+    			append_dev(form, input3);
     		},
     		p: noop,
     		i: noop,
@@ -4056,7 +4065,7 @@ var app = (function () {
     			a.textContent = "Contact Kip";
     			t1 = space();
     			p0 = element("p");
-    			p0.textContent = "In over twenty years of orchestral playing, and almost 30 years of\n        playing music, I have noticed for musicians to both not play to their\n        potential and to not enjoy what they do. I want to help change that. Together we will:";
+    			p0.textContent = "In over twenty years of orchestral playing, and almost 30 years of\n        playing music, I have often noticed musicians not playing to their\n        potential and not enjoying what they do. I want to help change that. Working with me, we will:";
     			t3 = space();
     			ul = element("ul");
     			li0 = element("li");
@@ -4102,29 +4111,29 @@ var app = (function () {
     			attr_dev(a, "class", "btn btn-lg my-5 align-self-center");
     			add_location(a, file$9, 7, 6, 196);
     			add_location(p0, file$9, 8, 6, 298);
-    			add_location(li0, file$9, 14, 8, 580);
-    			add_location(li1, file$9, 15, 8, 635);
-    			add_location(li2, file$9, 16, 8, 691);
-    			add_location(li3, file$9, 17, 8, 769);
-    			add_location(ul, file$9, 13, 6, 567);
+    			add_location(li0, file$9, 14, 8, 585);
+    			add_location(li1, file$9, 15, 8, 640);
+    			add_location(li2, file$9, 16, 8, 696);
+    			add_location(li3, file$9, 17, 8, 774);
+    			add_location(ul, file$9, 13, 6, 572);
     			add_location(div0, file$9, 6, 4, 184);
-    			add_location(h30, file$9, 22, 8, 926);
-    			add_location(h50, file$9, 23, 8, 956);
-    			add_location(p1, file$9, 24, 8, 990);
+    			add_location(h30, file$9, 22, 8, 931);
+    			add_location(h50, file$9, 23, 8, 961);
+    			add_location(p1, file$9, 24, 8, 995);
     			attr_dev(div1, "class", "lesson-type");
-    			add_location(div1, file$9, 21, 6, 892);
-    			add_location(h31, file$9, 27, 8, 1049);
-    			add_location(h51, file$9, 28, 8, 1080);
-    			add_location(p2, file$9, 29, 8, 1114);
+    			add_location(div1, file$9, 21, 6, 897);
+    			add_location(h31, file$9, 27, 8, 1054);
+    			add_location(h51, file$9, 28, 8, 1085);
+    			add_location(p2, file$9, 29, 8, 1119);
     			attr_dev(div2, "class", "lesson-type");
-    			add_location(div2, file$9, 26, 6, 1015);
-    			add_location(h32, file$9, 32, 8, 1173);
-    			add_location(h52, file$9, 33, 8, 1226);
-    			add_location(p3, file$9, 34, 8, 1260);
+    			add_location(div2, file$9, 26, 6, 1020);
+    			add_location(h32, file$9, 32, 8, 1178);
+    			add_location(h52, file$9, 33, 8, 1231);
+    			add_location(p3, file$9, 34, 8, 1265);
     			attr_dev(div3, "class", "lesson-type");
-    			add_location(div3, file$9, 31, 6, 1139);
+    			add_location(div3, file$9, 31, 6, 1144);
     			attr_dev(div4, "class", "container text-left pt-4");
-    			add_location(div4, file$9, 20, 4, 847);
+    			add_location(div4, file$9, 20, 4, 852);
     			attr_dev(div5, "class", "lesson-option");
     			add_location(div5, file$9, 5, 2, 152);
     			attr_dev(div6, "class", "container text-left mt-5");
@@ -6807,7 +6816,7 @@ var app = (function () {
     			create_component(blogpost.$$.fragment);
     			attr_dev(div0, "class", "container");
     			add_location(div0, file$h, 21, 4, 531);
-    			attr_dev(div1, "class", "content");
+    			attr_dev(div1, "class", "content svelte-uhes0j");
     			add_location(div1, file$h, 20, 2, 505);
     		},
     		m: function mount(target, anchor) {
