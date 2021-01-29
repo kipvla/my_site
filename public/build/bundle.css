@@ -2,7 +2,7 @@
 .blog-post.svelte-1m6u72j{text-align:center;justify-content:center;margin:auto}.img-thumbnail.svelte-1m6u72j{max-width:50%}
 .content.svelte-uhes0j{padding-top:90px}
 .carousel.svelte-18n2ijv{width:50%}.carousel-item.svelte-18n2ijv{background:black;position:relative;background-position:center;background-size:cover}@media only screen and (max-width: 768px){.carousel-item.svelte-18n2ijv{}.carousel.svelte-18n2ijv{width:70%}}
-textarea.svelte-94gy02{width:300px;height:150px}@media only screen and (min-width: 769px){.contact-form.svelte-94gy02{max-width:50vw}}
+textarea.svelte-1l0srdu{width:300px;height:150px}@media only screen and (min-width: 769px){.contact-form.svelte-1l0srdu{max-width:50vw}}
 .card.svelte-161h2cj{box-shadow:2px 4px 10px solid black}
 .hero.svelte-10ijpeq{background-image:url("/images/KR28-min.jpg");background-size:cover;background-position:48% center;height:800px}
 div.modal.svelte-17z5ruu{position:fixed;top:0;left:0;width:100%;height:100vh;display:flex;justify-content:center;align-items:center}div.backdrop.svelte-17z5ruu{position:absolute;width:100%;height:100%;background-color:rgba(85, 85, 85, 0.7)}div.content-wrapper.svelte-17z5ruu{z-index:10;max-width:70vw;border-radius:0.3rem;background-color:white;overflow:hidden;border:2px solid black}.image.svelte-17z5ruu{height:90vh;overflow:auto}@media(max-width: 767px){div.content-wrapper.svelte-17z5ruu{max-width:100vw}.image.svelte-17z5ruu{width:95vw;height:auto}}
