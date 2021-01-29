@@ -17,6 +17,7 @@ img {
 @media only screen and (max-width: 768px) {
   img {
     max-width: 100%;
+    object-fit: cover;
   }
 }
 </style>

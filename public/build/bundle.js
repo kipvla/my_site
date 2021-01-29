@@ -3943,7 +3943,7 @@ var app = (function () {
     			t = space();
     			img = element("img");
     			if (img.src !== (img_src_value = "images/KR12-min.jpg")) attr_dev(img, "src", img_src_value);
-    			attr_dev(img, "class", "m-5 order-md-0 svelte-dssfxj");
+    			attr_dev(img, "class", "m-5 order-md-0 svelte-3ctu8s");
     			attr_dev(img, "alt", "");
     			add_location(img, file$8, 7, 2, 192);
     			attr_dev(div, "class", "d-flex mt-5 flex-wrap justify-content-center");
