@@ -10,16 +10,16 @@
   >
     <div class="form-group">
       <label for="name"> Your name: </label>
-      <input type="text" name="name" />
+      <input type="text" id="name" name="name" class="form-control" placeholder="Name"/>
     </div>
     <div class="form-group">
       <label for="_replyto"> Your email: </label>
-      <input type="text" name="_replyto" />
+      <input type="text" name="_replyto" class="form-control" placeholder="Email"/>
     </div>
     <div class="form-group">
       <label for> Your message: </label>
 
-      <textarea name="message" row="10" />
+      <textarea name="message" rows="8" class="form-control" placeholder="Message"/>
     </div>
     <input type="submit" class="btn" value="Submit" />
     <input type="hidden" name="_next" value="//site.io/thanks.html" />

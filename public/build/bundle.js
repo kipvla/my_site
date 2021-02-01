@@ -1,5 +1,5 @@
 
-(function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35732/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(window.document);
+(function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(window.document);
 var app = (function () {
     'use strict';
 
@@ -1085,25 +1085,29 @@ var app = (function () {
     function create_fragment$1(ctx) {
     	let div1;
     	let div0;
-    	let p;
-    	let t0;
+    	let p0;
+    	let t1;
+    	let p1;
     	let a;
-    	let t2;
 
     	const block = {
     		c: function create() {
     			div1 = element("div");
     			div0 = element("div");
-    			p = element("p");
-    			t0 = text("A violist and an educator, Kip Riecken has performed with the Chicago and\n      St. Louis Symphonies, the Civic Orchestra of Chicago, and alongside Yo-Yo Ma\n      and Tabea Zimmerman. Kip's study of the Alexander Technique, an\n      indispensable method for enhancing efficiency of movement and personal\n      expression, inspires a lively and warm perspective on music-making and\n      teaching. Click ");
+    			p0 = element("p");
+    			p0.textContent = "Hi, I’m Kip. That’s a viola. I have been playing music for almost 30 years, and teaching for over 15. But I like to think there's more to me.";
+    			t1 = space();
+    			p1 = element("p");
     			a = element("a");
-    			a.textContent = "here";
-    			t2 = text(" to see Kip talk about the Alexander Technique on\n      YouTube.");
-    			attr_dev(a, "href", "https://www.youtube.com/channel/UCOzQuf-qTzKJx6YfYTaJLpQ?view_as=subscriber");
-    			add_location(a, file$1, 9, 22, 541);
-    			attr_dev(p, "class", "py-5");
-    			add_location(p, file$1, 3, 4, 115);
-    			attr_dev(div0, "class", "container w-100 text-justify px-5");
+    			a.textContent = "Want to find out?";
+    			attr_dev(p0, "class", "py-5");
+    			add_location(p0, file$1, 2, 4, 121);
+    			attr_dev(a, "class", "btn");
+    			attr_dev(a, "href", "/about");
+    			add_location(a, file$1, 12, 25, 898);
+    			attr_dev(p1, "class", "text-dark");
+    			add_location(p1, file$1, 12, 4, 877);
+    			attr_dev(div0, "class", "container w-100 text-justify px-5 d-flex flex-column align-items-center");
     			add_location(div0, file$1, 1, 2, 31);
     			attr_dev(div1, "class", "short-bio py-3");
     			add_location(div1, file$1, 0, 0, 0);
@@ -1114,10 +1118,10 @@ var app = (function () {
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
     			append_dev(div1, div0);
-    			append_dev(div0, p);
-    			append_dev(p, t0);
-    			append_dev(p, a);
-    			append_dev(p, t2);
+    			append_dev(div0, p0);
+    			append_dev(div0, t1);
+    			append_dev(div0, p1);
+    			append_dev(p1, a);
     		},
     		p: noop,
     		i: noop,
@@ -3342,7 +3346,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (23:0) {:catch error}
+    // (29:0) {:catch error}
     function create_catch_block(ctx) {
     	let p;
     	let t0;
@@ -3354,7 +3358,7 @@ var app = (function () {
     			p = element("p");
     			t0 = text("An error occurred! ");
     			t1 = text(t1_value);
-    			add_location(p, file$5, 23, 4, 565);
+    			add_location(p, file$5, 29, 4, 744);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -3373,14 +3377,14 @@ var app = (function () {
     		block,
     		id: create_catch_block.name,
     		type: "catch",
-    		source: "(23:0) {:catch error}",
+    		source: "(29:0) {:catch error}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (19:0) {:then data}
+    // (25:0) {:then data}
     function create_then_block(ctx) {
     	let each_1_anchor;
     	let current;
@@ -3469,14 +3473,14 @@ var app = (function () {
     		block,
     		id: create_then_block.name,
     		type: "then",
-    		source: "(19:0) {:then data}",
+    		source: "(25:0) {:then data}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (20:4) {#each data.places as place}
+    // (26:4) {#each data.places as place}
     function create_each_block(ctx) {
     	let blogpost;
     	let current;
@@ -3522,14 +3526,14 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(20:4) {#each data.places as place}",
+    		source: "(26:4) {#each data.places as place}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (15:19)      <div class="container d-flex justify-content-center mt-5">         <p class='m-5 p-5'>...waiting</p>     </div> {:then data}
+    // (21:19)      <div class="container d-flex justify-content-center mt-5">         <p class='m-5 p-5'>writing posts...</p>     </div> {:then data}
     function create_pending_block(ctx) {
     	let div;
     	let p;
@@ -3538,11 +3542,11 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			p = element("p");
-    			p.textContent = "...waiting";
+    			p.textContent = "writing posts...";
     			attr_dev(p, "class", "m-5 p-5");
-    			add_location(p, file$5, 16, 8, 412);
+    			add_location(p, file$5, 22, 8, 585);
     			attr_dev(div, "class", "container d-flex justify-content-center mt-5");
-    			add_location(div, file$5, 15, 4, 345);
+    			add_location(div, file$5, 21, 4, 518);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -3560,7 +3564,7 @@ var app = (function () {
     		block,
     		id: create_pending_block.name,
     		type: "pending",
-    		source: "(15:19)      <div class=\\\"container d-flex justify-content-center mt-5\\\">         <p class='m-5 p-5'>...waiting</p>     </div> {:then data}",
+    		source: "(21:19)      <div class=\\\"container d-flex justify-content-center mt-5\\\">         <p class='m-5 p-5'>writing posts...</p>     </div> {:then data}",
     		ctx
     	});
 
@@ -3823,33 +3827,39 @@ var app = (function () {
     			attr_dev(label0, "for", "name");
     			add_location(label0, file$7, 11, 6, 327);
     			attr_dev(input0, "type", "text");
+    			attr_dev(input0, "id", "name");
     			attr_dev(input0, "name", "name");
+    			attr_dev(input0, "class", "form-control");
+    			attr_dev(input0, "placeholder", "Name");
     			add_location(input0, file$7, 12, 6, 372);
     			attr_dev(div0, "class", "form-group");
     			add_location(div0, file$7, 10, 4, 296);
     			attr_dev(label1, "for", "_replyto");
-    			add_location(label1, file$7, 15, 6, 452);
+    			add_location(label1, file$7, 15, 6, 501);
     			attr_dev(input1, "type", "text");
     			attr_dev(input1, "name", "_replyto");
-    			add_location(input1, file$7, 16, 6, 502);
+    			attr_dev(input1, "class", "form-control");
+    			attr_dev(input1, "placeholder", "Email");
+    			add_location(input1, file$7, 16, 6, 551);
     			attr_dev(div1, "class", "form-group");
-    			add_location(div1, file$7, 14, 4, 421);
+    			add_location(div1, file$7, 14, 4, 470);
     			attr_dev(label2, "for", "");
-    			add_location(label2, file$7, 19, 6, 586);
+    			add_location(label2, file$7, 19, 6, 675);
     			attr_dev(textarea, "name", "message");
-    			attr_dev(textarea, "row", "10");
-    			attr_dev(textarea, "class", "svelte-1l0srdu");
-    			add_location(textarea, file$7, 21, 6, 628);
+    			attr_dev(textarea, "rows", "8");
+    			attr_dev(textarea, "class", "form-control svelte-1l0srdu");
+    			attr_dev(textarea, "placeholder", "Message");
+    			add_location(textarea, file$7, 21, 6, 717);
     			attr_dev(div2, "class", "form-group");
-    			add_location(div2, file$7, 18, 4, 555);
+    			add_location(div2, file$7, 18, 4, 644);
     			attr_dev(input2, "type", "submit");
     			attr_dev(input2, "class", "btn");
     			input2.value = "Submit";
-    			add_location(input2, file$7, 23, 4, 680);
+    			add_location(input2, file$7, 23, 4, 811);
     			attr_dev(input3, "type", "hidden");
     			attr_dev(input3, "name", "_next");
     			input3.value = "//site.io/thanks.html";
-    			add_location(input3, file$7, 24, 4, 735);
+    			add_location(input3, file$7, 24, 4, 866);
     			attr_dev(form, "action", "https://formspree.io/f/xpzolpwz");
     			attr_dev(form, "class", "text-left");
     			attr_dev(form, "method", "POST");
