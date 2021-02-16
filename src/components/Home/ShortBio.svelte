@@ -1,3 +1,7 @@
+<script>
+  import {link} from 'svelte-routing';
+</script>
+
 <div class="short-bio py-3">
   <div class="container w-100 text-justify px-5 d-flex flex-column align-items-center">
     <p class="py-5">
@@ -10,6 +14,6 @@
       teaching. Click <a href="https://www.youtube.com/channel/UCOzQuf-qTzKJx6YfYTaJLpQ?view_as=subscriber">here</a> to see Kip talk about the Alexander Technique on
       YouTube. -->
     </p>
-    <p class="text-dark"><a class="btn" href="/about">Want to find out?</a></p>
+    <p class="text-dark"><a class="btn" href="/about" use:link>Want to find out?</a></p>
   </div>
 </div>

@@ -1,6 +1,6 @@
 <script>
+  import {link} from 'svelte-routing';
   export let short;
-  console.log(short)
 </script>
 
 <div class="container d-flex flex-column align-items-center">
@@ -11,7 +11,7 @@
     I practice active rest just about every day, and have been doing so for
     about 10 years. I welcome you to try it.
   </p>
-  <a href="/blog/1" class="btn">More</a>
+  <a href="/blog/1" class="btn" use:link>More</a>
   {:else}
   <h1>How to Lie Down</h1>
   <img src="/images/kangaroo.jpeg" class="w-50 m-5 shadow" alt="" />
@@ -71,6 +71,6 @@
     Practicing this lie down, and learning AT, can help in ways that you may not
     have expected. And it can all just start with this simple practice.
   </p>
-  <a href="/blog" class="btn">Back to blogs</a>
+  <a href="/blog" class="btn" use:link>Back to blogs</a>
   {/if}
 </div>

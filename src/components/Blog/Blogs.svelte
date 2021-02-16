@@ -1,24 +1,24 @@
 <script>
-    // import {Router, Route} from 'svelte-routing'
-// import BlogPost from './BlogPost.svelte'
-import Post1 from './Posts/Post1.svelte'
+  // import {Router, Route} from 'svelte-routing'
+  // import BlogPost from './BlogPost.svelte'
+  import Post1 from "./Posts/Post1.svelte";
 
-    const fetchBlogs = fetch(`/api/blogposts`)
-        .then((data) => {
-            console.log('succ', data);
-            return data.json();
-        })
-        .catch((data) => {
-            console.log('error', data);
-            return data;
-        });
+  const fetchBlogs = fetch(`/api/blogposts`)
+    .then((data) => {
+      console.log("succ", data);
+      return data.json();
+    })
+    .catch((data) => {
+      console.log("error", data);
+      return data;
+    });
 </script>
 
 <!-- <Router>
     <Router path="/blogs/1" component={Post1}/>
 </Router> -->
 
-<Post1 short={true}/>
+<Post1 short={true} />
 
 <!-- {#await fetchBlogs}
     <div class="container d-flex justify-content-center mt-5">

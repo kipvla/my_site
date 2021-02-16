@@ -15,7 +15,6 @@
 </script>
 <div class="content">
   <Post1/>
-
 </div>
 
 
