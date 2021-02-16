@@ -5,7 +5,7 @@
 
 <div class="d-flex mt-5 flex-wrap justify-content-center">
   <Form />
-  <img src="images/KR12-min.jpg" class="m-5 order-md-0" alt="">
+  <img src="images/KR12-min.jpg" class="m-5 order-md-0 shadow" alt="">
 </div>
 
 
