@@ -8,7 +8,7 @@
     web,
     photo = false;
   import Carousel from "../Carousel.svelte";
-  import { fade, scale } from "svelte/transition";
+  import { fade, scale, fly } from "svelte/transition";
   import { onMount } from "svelte";
   import { quadOut } from "svelte/easing";
   const showButtons = () => {
@@ -88,7 +88,7 @@
           class="btn bios my-2"
           tabindex="-1"
           on:click={() => (music = !music)}
-          in:fade={{ duration: 1000 }}><i class="fas fa-music" /> Music</button
+          in:fly={{ duration: 500, x: 200 }}><i class="fas fa-music" /> Music</button
         >
 
         {#if music}
@@ -119,7 +119,7 @@
         <button
           class="btn bios my-2"
           on:click={() => (outreach = !outreach)}
-          in:fade={{ duration: 1000 }}
+          in:fly={{ duration: 500, x: 200, delay: 200 }}
           ><i class="fas fa-hands-helping" /> Outreach</button
         >
 
@@ -161,7 +161,7 @@
         <button
           class="btn bios my-2"
           on:click={() => (at = !at)}
-          in:fade={{ duration: 1000 }}
+          in:fly={{ duration: 500, x: 200, delay: 400 }}
           ><i class="fas fa-walking" /> Alexander Technique</button
         >
 
@@ -208,7 +208,7 @@
         <button
           class="btn bios my-2"
           on:click={() => (web = !web)}
-          in:fade={{ duration: 1000 }}
+          in:fly={{ duration: 500, x: 200, delay: 600 }}
           ><i class="fas fa-laptop-code" /> Web design</button
         >
 
@@ -226,7 +226,7 @@
         <button
           class="btn bios my-2"
           on:click={() => (photo = !photo)}
-          in:fade={{ duration: 1000 }}
+          in:fly={{ duration: 500, x: 200, delay: 800 }}
           ><i class="fas fa-camera" /> Photography</button
         >
 
@@ -237,7 +237,7 @@
         <button
           class="btn bios my-2"
           on:click={() => (teaching = !teaching)}
-          transition:fade={{ duration: 1000 }}
+          in:fly={{ duration: 500, x: 200, delay: 1000 }}
           ><i class="fas fa-chalkboard-teacher" /> Teaching</button
         >
 
