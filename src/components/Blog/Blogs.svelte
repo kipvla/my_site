@@ -1,7 +1,7 @@
 <script>
     // import {Router, Route} from 'svelte-routing'
-import BlogPost from './BlogPost.svelte'
-// import Post1 from './Posts/Post1.svelte'
+// import BlogPost from './BlogPost.svelte'
+import Post1 from './Posts/Post1.svelte'
 
     const fetchBlogs = fetch(`/api/blogposts`)
         .then((data) => {
@@ -18,7 +18,9 @@ import BlogPost from './BlogPost.svelte'
     <Router path="/blogs/1" component={Post1}/>
 </Router> -->
 
-{#await fetchBlogs}
+<Post1 short={true}/>
+
+<!-- {#await fetchBlogs}
     <div class="container d-flex justify-content-center mt-5">
         <p class='m-5 p-5'>writing posts...</p>
     </div>
@@ -28,4 +30,4 @@ import BlogPost from './BlogPost.svelte'
     {/each}
 {:catch error}
     <p>An error occurred! {`${error}`}</p>
-{/await}
+{/await} -->
