@@ -88,7 +88,8 @@
           class="btn bios my-2"
           tabindex="-1"
           on:click={() => (music = !music)}
-          in:fly={{ duration: 500, x: 200 }}><i class="fas fa-music" /> Music</button
+          in:fly={{ duration: 500, x: 200 }}
+          ><i class="fas fa-music" /> Music</button
         >
 
         {#if music}
@@ -231,7 +232,11 @@
         >
 
         {#if photo}
-          <p transition:fade={{ duration: 1000 }}>Photography stuff.</p>
+          <p transition:fade={{ duration: 1000 }}>
+            <a href="https://photosbykip.netlify.app/"
+              >Check out my photography site</a
+            >
+          </p>
         {/if}
 
         <button
@@ -266,8 +271,8 @@
           <button class="btn" href="/lessons">Lessons</button>
 
           <p transition:fade={{ duration: 1000 }}>
-            Visit the lessons page to schedule a lesson or
-            find out more. I look forward to hearing from you!
+            Visit the lessons page to schedule a lesson or find out more. I look
+            forward to hearing from you!
           </p>
 
           <!-- <a href="kip.riecken@gmail.com">kip.riecken@gmail.com</a> -->
@@ -275,7 +280,7 @@
         {/if}
       {/if}
 
-      <!-- {/if} -->
+
     </div>
   </div>
 </div>

@@ -4449,30 +4449,30 @@ var app = (function () {
     			if (if_block5) if_block5.c();
     			if_block5_anchor = empty();
     			attr_dev(i0, "class", "fas fa-music svelte-41qe4r");
-    			add_location(i0, file$b, 90, 45, 2535);
+    			add_location(i0, file$b, 91, 11, 2546);
     			attr_dev(button0, "class", "btn bios my-2");
     			attr_dev(button0, "tabindex", "-1");
     			add_location(button0, file$b, 86, 8, 2382);
     			attr_dev(i1, "class", "fas fa-hands-helping svelte-41qe4r");
-    			add_location(i1, file$b, 122, 11, 3571);
+    			add_location(i1, file$b, 123, 11, 3582);
     			attr_dev(button1, "class", "btn bios my-2");
-    			add_location(button1, file$b, 118, 8, 3413);
+    			add_location(button1, file$b, 119, 8, 3424);
     			attr_dev(i2, "class", "fas fa-walking svelte-41qe4r");
-    			add_location(i2, file$b, 164, 11, 5682);
+    			add_location(i2, file$b, 165, 11, 5693);
     			attr_dev(button2, "class", "btn bios my-2");
-    			add_location(button2, file$b, 160, 8, 5536);
+    			add_location(button2, file$b, 161, 8, 5547);
     			attr_dev(i3, "class", "fas fa-laptop-code svelte-41qe4r");
-    			add_location(i3, file$b, 211, 11, 7560);
+    			add_location(i3, file$b, 212, 11, 7571);
     			attr_dev(button3, "class", "btn bios my-2");
-    			add_location(button3, file$b, 207, 8, 7412);
+    			add_location(button3, file$b, 208, 8, 7423);
     			attr_dev(i4, "class", "fas fa-camera svelte-41qe4r");
-    			add_location(i4, file$b, 229, 11, 8353);
+    			add_location(i4, file$b, 230, 11, 8364);
     			attr_dev(button4, "class", "btn bios my-2");
-    			add_location(button4, file$b, 225, 8, 8201);
+    			add_location(button4, file$b, 226, 8, 8212);
     			attr_dev(i5, "class", "fas fa-chalkboard-teacher svelte-41qe4r");
-    			add_location(i5, file$b, 240, 11, 8687);
+    			add_location(i5, file$b, 245, 11, 8808);
     			attr_dev(button5, "class", "btn bios my-2");
-    			add_location(button5, file$b, 236, 8, 8528);
+    			add_location(button5, file$b, 241, 8, 8649);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button0, anchor);
@@ -4763,7 +4763,7 @@ var app = (function () {
     	return block;
     }
 
-    // (94:8) {#if music}
+    // (95:8) {#if music}
     function create_if_block_6(ctx) {
     	let p;
     	let p_intro;
@@ -4782,10 +4782,10 @@ var app = (function () {
     			a.textContent = "Performance with Yo-Yo Ma";
     			t3 = text("\n          embedded vid with Tabea");
     			attr_dev(p, "class", "svelte-41qe4r");
-    			add_location(p, file$b, 94, 10, 2617);
+    			add_location(p, file$b, 95, 10, 2628);
     			attr_dev(a, "class", "mb-3");
     			attr_dev(a, "href", "https://chicago.suntimes.com/2017/6/11/18378502/yo-yo-ma-performs-concert-for-peace-at-st-sabina-church");
-    			add_location(a, file$b, 110, 10, 3151);
+    			add_location(a, file$b, 111, 10, 3162);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -4834,14 +4834,14 @@ var app = (function () {
     		block,
     		id: create_if_block_6.name,
     		type: "if",
-    		source: "(94:8) {#if music}",
+    		source: "(95:8) {#if music}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (126:8) {#if outreach}
+    // (127:8) {#if outreach}
     function create_if_block_5(ctx) {
     	let p0;
     	let t0;
@@ -4882,17 +4882,17 @@ var app = (function () {
     			t11 = text("\n          Pics from these projects");
     			attr_dev(a0, "class", "mb-3");
     			attr_dev(a0, "href", "https://rediscoveringmusician.wordpress.com/");
-    			add_location(a0, file$b, 132, 27, 4123);
+    			add_location(a0, file$b, 133, 27, 4134);
     			attr_dev(a1, "href", "http://lisadeangelis.com/");
-    			add_location(a1, file$b, 138, 12, 4412);
+    			add_location(a1, file$b, 139, 12, 4423);
     			attr_dev(a2, "href", "https://rediscoveringmusician.wordpress.com/");
-    			add_location(a2, file$b, 140, 12, 4521);
+    			add_location(a2, file$b, 141, 12, 4532);
     			attr_dev(p0, "class", "svelte-41qe4r");
-    			add_location(p0, file$b, 126, 10, 3667);
+    			add_location(p0, file$b, 127, 10, 3678);
     			attr_dev(p1, "class", "svelte-41qe4r");
-    			add_location(p1, file$b, 144, 10, 4625);
+    			add_location(p1, file$b, 145, 10, 4636);
     			attr_dev(p2, "class", "svelte-41qe4r");
-    			add_location(p2, file$b, 156, 10, 5434);
+    			add_location(p2, file$b, 157, 10, 5445);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p0, anchor);
@@ -4948,14 +4948,14 @@ var app = (function () {
     		block,
     		id: create_if_block_5.name,
     		type: "if",
-    		source: "(126:8) {#if outreach}",
+    		source: "(127:8) {#if outreach}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (168:8) {#if at}
+    // (169:8) {#if at}
     function create_if_block_4(ctx) {
     	let div7;
     	let p;
@@ -4996,33 +4996,33 @@ var app = (function () {
     			t4 = space();
     			div3 = element("div");
     			attr_dev(p, "class", "svelte-41qe4r");
-    			add_location(p, file$b, 169, 12, 5832);
+    			add_location(p, file$b, 170, 12, 5843);
     			attr_dev(img, "class", "img-thumbnail my-4 svelte-41qe4r");
     			if (img.src !== (img_src_value = "images/REarle.JPG")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
-    			add_location(img, file$b, 182, 12, 6494);
+    			add_location(img, file$b, 183, 12, 6505);
     			attr_dev(div0, "class", "col-3");
-    			add_location(div0, file$b, 187, 18, 6688);
+    			add_location(div0, file$b, 188, 18, 6699);
     			attr_dev(iframe, "class", "resp-iframe");
     			attr_dev(iframe, "title", "Gribby");
     			if (iframe.src !== (iframe_src_value = "https://www.youtube.com/embed/pN1ZA6hWd3s")) attr_dev(iframe, "src", iframe_src_value);
     			attr_dev(iframe, "frameborder", "0");
     			attr_dev(iframe, "allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
     			iframe.allowFullscreen = true;
-    			add_location(iframe, file$b, 190, 22, 6828);
+    			add_location(iframe, file$b, 191, 22, 6839);
     			attr_dev(div1, "class", "videos shadow");
-    			add_location(div1, file$b, 189, 20, 6778);
+    			add_location(div1, file$b, 190, 20, 6789);
     			attr_dev(div2, "class", "col-12 col-md-6");
-    			add_location(div2, file$b, 188, 18, 6728);
+    			add_location(div2, file$b, 189, 18, 6739);
     			attr_dev(div3, "class", "col-3");
-    			add_location(div3, file$b, 200, 18, 7287);
+    			add_location(div3, file$b, 201, 18, 7298);
     			attr_dev(div4, "class", "row");
-    			add_location(div4, file$b, 186, 16, 6652);
+    			add_location(div4, file$b, 187, 16, 6663);
     			attr_dev(div5, "class", "container");
-    			add_location(div5, file$b, 185, 14, 6612);
+    			add_location(div5, file$b, 186, 14, 6623);
     			attr_dev(div6, "class", "video mb-3");
-    			add_location(div6, file$b, 184, 12, 6573);
-    			add_location(div7, file$b, 168, 10, 5777);
+    			add_location(div6, file$b, 185, 12, 6584);
+    			add_location(div7, file$b, 169, 10, 5788);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div7, anchor);
@@ -5067,14 +5067,14 @@ var app = (function () {
     		block,
     		id: create_if_block_4.name,
     		type: "if",
-    		source: "(168:8) {#if at}",
+    		source: "(169:8) {#if at}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (215:8) {#if web}
+    // (216:8) {#if web}
     function create_if_block_3(ctx) {
     	let p;
     	let t0;
@@ -5091,9 +5091,9 @@ var app = (function () {
     			a.textContent = "found here";
     			t2 = text(". I greatly enjoy helping clients find a comfortable internet voice\n            with which to project their best selves.");
     			attr_dev(a, "href", "https://kiprieckenportfolio.netlify.app/");
-    			add_location(a, file$b, 219, 21, 7950);
+    			add_location(a, file$b, 220, 21, 7961);
     			attr_dev(p, "class", "svelte-41qe4r");
-    			add_location(p, file$b, 215, 10, 7651);
+    			add_location(p, file$b, 216, 10, 7662);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -5127,28 +5127,33 @@ var app = (function () {
     		block,
     		id: create_if_block_3.name,
     		type: "if",
-    		source: "(215:8) {#if web}",
+    		source: "(216:8) {#if web}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (233:8) {#if photo}
+    // (234:8) {#if photo}
     function create_if_block_2(ctx) {
     	let p;
+    	let a;
     	let p_transition;
     	let current;
 
     	const block = {
     		c: function create() {
     			p = element("p");
-    			p.textContent = "Photography stuff.";
+    			a = element("a");
+    			a.textContent = "Check out my photography site";
+    			attr_dev(a, "href", "https://photosbykip.netlify.app/");
+    			add_location(a, file$b, 235, 12, 8506);
     			attr_dev(p, "class", "svelte-41qe4r");
-    			add_location(p, file$b, 233, 10, 8442);
+    			add_location(p, file$b, 234, 10, 8453);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
+    			append_dev(p, a);
     			current = true;
     		},
     		i: function intro(local) {
@@ -5176,14 +5181,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(233:8) {#if photo}",
+    		source: "(234:8) {#if photo}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (244:8) {#if teaching}
+    // (249:8) {#if teaching}
     function create_if_block_1$1(ctx) {
     	let t0;
     	let p0;
@@ -5218,22 +5223,22 @@ var app = (function () {
     			button0.textContent = "Lessons";
     			t7 = space();
     			p2 = element("p");
-    			p2.textContent = "Visit the lessons page to schedule a lesson or\n            find out more. I look forward to hearing from you!";
+    			p2.textContent = "Visit the lessons page to schedule a lesson or find out more. I look\n            forward to hearing from you!";
     			t9 = space();
     			button1 = element("button");
     			button1.textContent = "Contact Kip";
     			attr_dev(p0, "class", "svelte-41qe4r");
-    			add_location(p0, file$b, 248, 10, 8886);
+    			add_location(p0, file$b, 253, 10, 9007);
     			attr_dev(p1, "class", "svelte-41qe4r");
-    			add_location(p1, file$b, 257, 10, 9267);
+    			add_location(p1, file$b, 262, 10, 9388);
     			attr_dev(button0, "class", "btn");
     			attr_dev(button0, "href", "/lessons");
-    			add_location(button0, file$b, 265, 10, 9699);
+    			add_location(button0, file$b, 270, 10, 9820);
     			attr_dev(p2, "class", "svelte-41qe4r");
-    			add_location(p2, file$b, 267, 10, 9763);
+    			add_location(p2, file$b, 272, 10, 9884);
     			attr_dev(button1, "class", "btn");
     			attr_dev(button1, "href", "/contact");
-    			add_location(button1, file$b, 273, 10, 10029);
+    			add_location(button1, file$b, 278, 10, 10150);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t0, anchor);
@@ -5305,7 +5310,7 @@ var app = (function () {
     		block,
     		id: create_if_block_1$1.name,
     		type: "if",
-    		source: "(244:8) {#if teaching}",
+    		source: "(249:8) {#if teaching}",
     		ctx
     	});
 
