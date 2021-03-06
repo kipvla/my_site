@@ -18,27 +18,7 @@
     setTimeout(() => {
       showButton = true;
     }, 1500);
-    //   let moreBtn = document.getElementById("more");
-    // moreBtn.addEventListener("click", showButtons);
-    // if (more) {
-    //   moreBtn.innerHTML = "Less";
-    // } else {
-    //   moreBtn.innerHTML = "More";
-    // }
   });
-
-  // onMount(() => {
-  //   document
-  //     .querySelectorAll(".btn")
-  //     .forEach((item) => item.classList.remove("invisible"));
-  // });
-
-  // window.addEventListener('load',
-  // function() {
-  //   document
-  //     .querySelectorAll(".btn")
-  //     .forEach((item) => item.classList.remove("invisible"));
-  // }, false);
 </script>
 
 <div class="bio d-flex">
@@ -114,7 +94,7 @@
             href="https://chicago.suntimes.com/2017/6/11/18378502/yo-yo-ma-performs-concert-for-peace-at-st-sabina-church"
             >Performance with Yo-Yo Ma</a
           >
-          embedded vid with Tabea
+          <!-- embedded vid with Tabea -->
         {/if}
 
         <button
@@ -155,8 +135,8 @@
             and three community performances in which the fellows spoke in
             Spanish about the music.
           </p>
-          <p>Further, I co-produced and co-hosted</p>
-          Pics from these projects
+          <!-- <p>Further, I co-produced and co-hosted</p> -->
+          <!-- Pics from these projects -->
         {/if}
 
         <button
@@ -179,7 +159,7 @@
               everyone’s lives.
             </p>
 
-            YouTube, pics from Ireland Congress, link to page on AT?
+            <!-- YouTube, pics from Ireland Congress, link to page on AT? -->
 
             <img class="img-thumbnail my-4" src="images/REarle.JPG" alt="" />
 
@@ -249,38 +229,33 @@
         {#if teaching}
           Pics from CAYO, MUSAID
 
-          <!-- <div class="mb-3"> -->
-          <!-- </div> -->
           <p transition:fade={{ duration: 1000 }}>
             With over 15 years of teaching experience, from beginner to college
-            level, I offers violin and viola over Zoom. Every lesson is informed
-            by my unique experience with Alexander Technique inspire joy and
-            sustainability in my students' playing.
+            level, I offer violin and viola lessons over Zoom. Every lesson is
+            informed by my unique experience with Alexander Technique to inspire
+            joy and sustainability in my students' playing.
           </p>
 
           <Carousel />
 
           <p transition:fade={{ duration: 1000 }}>
-            I even took my knowledge of Spanish and traveled to Havana, Cuba
-            with Cuban American Youth Orchestra, and El Salvador, San Salvador
-            with MUSAID, putting myself for the first time in a Spanish-speaking
-            environment in which I taught and mentored students who speak no or
-            little English. And it was amazing!
+            Here are some images from when I took my knowledge of Spanish and
+            traveled to Havana, Cuba with Cuban American Youth Orchestra, and El
+            Salvador, San Salvador with MUSAID, putting myself for the first
+            time in a Spanish-speaking environment in which I taught and
+            mentoring students who speak no or little English.
           </p>
 
           <button class="btn" href="/lessons">Lessons</button>
 
           <p transition:fade={{ duration: 1000 }}>
             Visit the lessons page to schedule a lesson or find out more. I look
-            forward to hearing from you!
+            forward to hearing from you.
           </p>
 
-          <!-- <a href="kip.riecken@gmail.com">kip.riecken@gmail.com</a> -->
           <button class="btn" href="/contact">Contact Kip</button>
         {/if}
       {/if}
-
-
     </div>
   </div>
 </div>
