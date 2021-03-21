@@ -2,14 +2,21 @@
   import { fly } from "svelte/transition";
 </script>
 
-<div class="container text-left mt-5" in:fly={{ x: 200, delay:1000, duration: 4000 }}>
+<div
+  class="container text-left mt-5"
+  in:fly={{ x: 50, delay: 1000, duration: 4000 }}
+>
   <div class="lesson-option">
     <div>
-      <a href="mailto:kipriecken@gmail.com" class="btn btn-lg my-5 align-self-center">Contact Kip</a>
+      <a
+        href="mailto:kipriecken@gmail.com"
+        class="btn btn-lg my-5 align-self-center">Contact Kip</a
+      >
       <p>
         In over twenty years of orchestral playing, and almost 30 years of
         playing music, I have often noticed musicians not playing to their
-        potential and not enjoying what they do. I want to help change that. Working with me, we will:
+        potential and not enjoying what they do. I want to help change that.
+        Working with me, we will:
       </p>
       <ul>
         <li>Deepen your connection with the music</li>
