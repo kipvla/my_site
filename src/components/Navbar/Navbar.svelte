@@ -1,18 +1,9 @@
 <script>
   import { link } from "svelte-routing";
-  import { onMount } from "svelte";
-  // onMount(() => {
-    function classToggle() {
-      const navs = document.querySelectorAll(".navbar-items");
-      navs.forEach((nav) => nav.classList.toggle("navbar-toggle-show"));
-    }
-  //   document
-  //     .querySelector(".navbar-toggler")
-  //     .addEventListener("click", classToggle);
-  //   document
-  //     .querySelector(".navbar-items")
-  //     .addEventListener("click", classToggle);
-  // });
+  function classToggle() {
+    const navs = document.querySelectorAll(".navbar-items");
+    navs.forEach((nav) => nav.classList.toggle("navbar-toggle-show"));
+  }
 </script>
 
 <div id="mainNavbar" class="navbar fixed-top">
@@ -25,7 +16,8 @@
     <button
       class="navbar-toggler navbar-toggler-right"
       type="button"
-      on:click={classToggle}>
+      on:click={classToggle}
+    >
       <span class="icon-bar top-bar" />
       <span class="icon-bar middle-bar" />
       <span class="icon-bar bottom-bar" />
@@ -35,15 +27,23 @@
 
   <!-- <div class="nav-link nav-link-toggle"><i class="fas fa-bars" /></div> -->
   <nav class="navbar-items" id="navbarResponsive">
-    <a href="/about" use:link class="nav-link font-weight-light" on:click={classToggle}>About</a>
-    <a href="/lessons" use:link class="nav-link" on:click={classToggle}>Lessons</a>
+    <a
+      href="/about"
+      use:link
+      class="nav-link font-weight-light"
+      on:click={classToggle}>About</a
+    >
+    <a href="/lessons" use:link class="nav-link" on:click={classToggle}
+      >Lessons</a
+    >
     <a href="/blog" use:link class="nav-link" on:click={classToggle}>Blog</a>
-    <a href="/contact" use:link class="nav-link" on:click={classToggle}>Contact</a>
+    <a href="/contact" use:link class="nav-link" on:click={classToggle}
+      >Contact</a
+    >
   </nav>
 </div>
 
 <style>
-
   a > span {
     transition: color 1s ease-in-out;
   }
@@ -66,11 +66,11 @@
   }
   @media only screen and (min-width: 821px) {
     .navbar-items {
-      visibility: visible!important;
+      visibility: visible !important;
     }
     .navbar-toggler {
       display: none;
-        }
+    }
   }
 
   .navbar-toggler .icon-bar {

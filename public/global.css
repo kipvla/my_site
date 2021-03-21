@@ -40,11 +40,13 @@ Navbar
   background: rgba(60, 68, 70, 0.3);
   transition: background 700ms;
   /* color: rgb(120, 192, 225); */
+  color: white;
 }
 
 .navbar.scrolled {
-  background: rgba(60, 68, 70, 0.8);
+  background: rgba(60, 68, 70,0.9);
   transition: background 1400ms;
+  color: white;
 }
 
 .navbar.scrolled > .navbar-items {
@@ -235,13 +237,6 @@ Contact Form
 About
 *****************************************************************************/
 
-/* .bio { */
-  /* background-image: url("/images/KR32.jpg");
-  background-size: cover;
-  padding-top: 150px;
-  height: 100vh; */
-/* } */
-
 .bio-text {
   color: black;
   background-color: rgb(255, 255, 255, 0.8);
@@ -257,7 +252,6 @@ Videos
 
 .video {
   background-color: antiquewhite;
-  /* background: linear-gradient(90deg, rgba(60, 68, 70, 0.4), white); */
   width: 100%;
 }
 
