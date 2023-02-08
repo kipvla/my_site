@@ -11,7 +11,7 @@
         ><i class="mx-3 fab fa-youtube" alt="youtube" /></a
       >
     </div>
-    &copy; Copyright 2021 Kip Riecken
+    &copy; Copyright 2023 Kip Riecken
     <br />
     Proudly self-designed.
   </div>
